@@ -2,7 +2,7 @@
 
 Welcome to **Dino Kitty Jump**, a retro-style side-scroller game implemented in **Verilog HDL**. This adorable cat isn’t just cute—it jumps, dodges obstacles, and flashes with flair when hit!
 
-Designed for FPGA boards with basic VGA support, this project is a great demonstration of sprite rendering, animation, collision detection, and game logic in hardware.
+Designed for FPGA boards with basic ouput support, this project is a great demonstration of sprite rendering, animation, collision detection, and game logic in hardware.
 
 ---
 
@@ -30,10 +30,10 @@ Just like the classic dino game, your goal is to **jump over oncoming obstacles*
 
 ## 🛠️ Hardware Requirements
 
-- FPGA board with VGA output support  
-- ~27 MHz clock input  
+- FPGA board (any)
+- ~27 MHz clock input  (can be modified)
 - Push button input (active low)  
-- 128×64 VGA-compatible screen resolution
+- 128×64 resolution SSD1306 based display
 
 Tested on:
 - Tang Nano 9k(Gowin GW1NR-9)
