@@ -1,0 +1,42 @@
+GowinSynthesis start
+Running parser ...
+Analyzing Verilog file '/home/tallguydesi/Documents/GitHub/Dino-Game-128x64-OLED-using-FPGA/src/jump_controller.v'
+Analyzing Verilog file '/home/tallguydesi/Documents/GitHub/Dino-Game-128x64-OLED-using-FPGA/src/pattern_generator.v'
+Analyzing Verilog file '/home/tallguydesi/Documents/GitHub/Dino-Game-128x64-OLED-using-FPGA/src/screen_driver.v'
+WARN  (EX3628) : Redeclaration of ANSI port 'frameNumber' is not allowed("/home/tallguydesi/Documents/GitHub/Dino-Game-128x64-OLED-using-FPGA/src/screen_driver.v":41)
+Analyzing Verilog file '/home/tallguydesi/Documents/GitHub/Dino-Game-128x64-OLED-using-FPGA/src/top.v'
+Compiling module 'top'("/home/tallguydesi/Documents/GitHub/Dino-Game-128x64-OLED-using-FPGA/src/top.v":3)
+Compiling module 'screen_driver(STARTUP_WAIT=32'b00000000100110001001011010000000,FRAME_WAIT=32'b00000000000001101101110111010000)'("/home/tallguydesi/Documents/GitHub/Dino-Game-128x64-OLED-using-FPGA/src/screen_driver.v":3)
+WARN  (EX3780) : Using initial value of 'startupCommands' since it is never assigned("/home/tallguydesi/Documents/GitHub/Dino-Game-128x64-OLED-using-FPGA/src/screen_driver.v":44)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 8("/home/tallguydesi/Documents/GitHub/Dino-Game-128x64-OLED-using-FPGA/src/screen_driver.v":99)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("/home/tallguydesi/Documents/GitHub/Dino-Game-128x64-OLED-using-FPGA/src/screen_driver.v":120)
+WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("/home/tallguydesi/Documents/GitHub/Dino-Game-128x64-OLED-using-FPGA/src/screen_driver.v":134)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("/home/tallguydesi/Documents/GitHub/Dino-Game-128x64-OLED-using-FPGA/src/screen_driver.v":141)
+WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("/home/tallguydesi/Documents/GitHub/Dino-Game-128x64-OLED-using-FPGA/src/screen_driver.v":182)
+WARN  (EX1998) : Net 'commandIndex[2]' does not have a driver("/home/tallguydesi/Documents/GitHub/Dino-Game-128x64-OLED-using-FPGA/src/screen_driver.v":49)
+Compiling module 'jump_controller'("/home/tallguydesi/Documents/GitHub/Dino-Game-128x64-OLED-using-FPGA/src/jump_controller.v":1)
+Compiling module 'pattern_generator'("/home/tallguydesi/Documents/GitHub/Dino-Game-128x64-OLED-using-FPGA/src/pattern_generator.v":1)
+Extracting RAM for identifier 'catSprite'("/home/tallguydesi/Documents/GitHub/Dino-Game-128x64-OLED-using-FPGA/src/pattern_generator.v":11)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 7("/home/tallguydesi/Documents/GitHub/Dino-Game-128x64-OLED-using-FPGA/src/pattern_generator.v":21)
+WARN  (EX3791) : Expression size 8 truncated to fit in target size 7("/home/tallguydesi/Documents/GitHub/Dino-Game-128x64-OLED-using-FPGA/src/pattern_generator.v":22)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 8("/home/tallguydesi/Documents/GitHub/Dino-Game-128x64-OLED-using-FPGA/src/pattern_generator.v":39)
+NOTE  (EX0101) : Current top module is "top"
+[5%] Running netlist conversion ...
+Running device independent optimization ...
+[10%] Optimizing Phase 0 completed
+[15%] Optimizing Phase 1 completed
+[25%] Optimizing Phase 2 completed
+Running inference ...
+[30%] Inferring Phase 0 completed
+[40%] Inferring Phase 1 completed
+[50%] Inferring Phase 2 completed
+[55%] Inferring Phase 3 completed
+Running technical mapping ...
+[60%] Tech-Mapping Phase 0 completed
+[65%] Tech-Mapping Phase 1 completed
+[75%] Tech-Mapping Phase 2 completed
+[80%] Tech-Mapping Phase 3 completed
+[90%] Tech-Mapping Phase 4 completed
+[95%] Generate netlist file "/home/tallguydesi/Documents/GitHub/Dino-Game-128x64-OLED-using-FPGA/impl/gwsynthesis/Functional_60FPS.vg" completed
+[100%] Generate report file "/home/tallguydesi/Documents/GitHub/Dino-Game-128x64-OLED-using-FPGA/impl/gwsynthesis/Functional_60FPS_syn.rpt.html" completed
+GowinSynthesis finish

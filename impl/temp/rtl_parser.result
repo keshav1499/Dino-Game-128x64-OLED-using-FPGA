@@ -1,0 +1,36 @@
+[
+ {
+  "InstFile" : "/home/tallguydesi/Documents/GitHub/Dino-Game-128x64-OLED-using-FPGA/src/top.v",
+  "InstLine" : 3,
+  "InstName" : "top",
+  "ModuleFile" : "/home/tallguydesi/Documents/GitHub/Dino-Game-128x64-OLED-using-FPGA/src/top.v",
+  "ModuleLine" : 3,
+  "ModuleName" : "top",
+  "SubInsts" : [
+   {
+    "InstFile" : "/home/tallguydesi/Documents/GitHub/Dino-Game-128x64-OLED-using-FPGA/src/top.v",
+    "InstLine" : 25,
+    "InstName" : "driver",
+    "ModuleFile" : "/home/tallguydesi/Documents/GitHub/Dino-Game-128x64-OLED-using-FPGA/src/screen_driver.v",
+    "ModuleLine" : 3,
+    "ModuleName" : "screen_driver"
+   },
+   {
+    "InstFile" : "/home/tallguydesi/Documents/GitHub/Dino-Game-128x64-OLED-using-FPGA/src/top.v",
+    "InstLine" : 40,
+    "InstName" : "jump_inst",
+    "ModuleFile" : "/home/tallguydesi/Documents/GitHub/Dino-Game-128x64-OLED-using-FPGA/src/jump_controller.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "jump_controller"
+   },
+   {
+    "InstFile" : "/home/tallguydesi/Documents/GitHub/Dino-Game-128x64-OLED-using-FPGA/src/top.v",
+    "InstLine" : 48,
+    "InstName" : "patternGen",
+    "ModuleFile" : "/home/tallguydesi/Documents/GitHub/Dino-Game-128x64-OLED-using-FPGA/src/pattern_generator.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "pattern_generator"
+   }
+  ]
+ }
+]
