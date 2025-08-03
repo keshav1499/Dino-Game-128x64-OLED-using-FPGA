@@ -41,7 +41,9 @@ module screen_driver
   reg [7:0] frameNumber = 0;
 
   localparam SETUP_INSTRUCTIONS = 23;
-  reg [(SETUP_INSTRUCTIONS*8)-1:0] startupCommands = {
+  reg [(SETUP_INSTRUCTIONS*8)-1:0]
+//The below startup commands are needed for display initialisation...
+ startupCommands = {
     8'hAE, 8'h81, 8'h7F, 8'hA6, 8'h20, 8'h00, 8'hC8, 8'h40,
     8'hA1, 8'hA8, 8'h3F, 8'hD3, 8'h00, 8'hD5, 8'h80, 8'hD9,
     8'h22, 8'hDB, 8'h20, 8'h8D, 8'h14, 8'hA4, 8'hAF
