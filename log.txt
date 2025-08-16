@@ -1,0 +1,197 @@
+@tallguydesi  python main.py
+Updated weather data
+
+--- Battery Prediction ---
+Current battery: 65%
+Temperature: 27.62°C (Deviation: 4.62°C)
+Wind speed: 1.82 m/s, Direction: 107°
+Drone heading: 304°
+Relative wind angle: 163.0°
+Temperature factor: 1.011
+Wind factor: 0.965
+Calculated drain rate: 0.98%/min
+Predicted time left: 66.6 minutes
+-------------------------
+
+[Google Sheets] Status: 200 | Response: {"status":"success","message":"Data logged successfully","row":2960}
+[Google Sheets] Status: 200 | Response: {"status":"success","message":"Data logged successfully","row":2961}
+[Google Sheets] Status: 200 | Response: {"status":"success","message":"Data logged successfully","row":2962}
+
+--- Battery Prediction ---
+Current battery: 65%
+Temperature: 25.80°C (Deviation: 2.80°C)
+Wind speed: 1.82 m/s, Direction: 107°
+Drone heading: 304°
+Relative wind angle: 163.0°
+Temperature factor: 1.004
+Wind factor: 0.965
+Calculated drain rate: 0.97%/min
+Predicted time left: 66.8 minutes
+-------------------------
+
+[Google Sheets] Status: 200 | Response: {"status":"success","message":"Data logged successfully","row":2963}
+[Google Sheets] Status: 200 | Response: {"status":"success","message":"Data logged successfully","row":2964}
+[Google Sheets] Status: 200 | Response: {"status":"success","message":"Data logged successfully","row":2965}
+[Google Sheets] Status: 200 | Response: {"status":"success","message":"Data logged successfully","row":2966}
+Updated weather data
+
+--- Battery Prediction ---
+Current battery: 64%
+Temperature: 24.02°C (Deviation: 1.02°C)
+Wind speed: 1.82 m/s, Direction: 107°
+Drone heading: 304°
+Relative wind angle: 163.0°
+Temperature factor: 1.001
+Wind factor: 0.965
+Calculated drain rate: 0.97%/min
+Predicted time left: 66.7 minutes
+-------------------------
+
+[Google Sheets] Status: 200 | Response: {"status":"success","message":"Data logged successfully","row":2967}
+[Google Sheets] Status: 200 | Response: {"status":"success","message":"Data logged successfully","row":2968}
+[Google Sheets] Status: 200 | Response: {"status":"success","message":"Data logged successfully","row":2969}
+[Google Sheets] Status: 200 | Response: {"status":"success","message":"Data logged successfully","row":2970}
+[Google Sheets] Status: 200 | Response: {"status":"success","message":"Data logged successfully","row":2971}
+
+--- Battery Prediction ---
+Current battery: 64%
+Temperature: 22.20°C (Deviation: 0.80°C)
+Wind speed: 1.82 m/s, Direction: 107°
+Drone heading: 304°
+Relative wind angle: 163.0°
+Temperature factor: 1.000
+Wind factor: 0.965
+Calculated drain rate: 0.97%/min
+Predicted time left: 66.5 minutes
+-------------------------
+
+[Google Sheets] Status: 200 | Response: {"status":"success","message":"Data logged successfully","row":2972}
+[Google Sheets] Status: 200 | Response: {"status":"success","message":"Data logged successfully","row":2973}
+[Google Sheets] Status: 200 | Response: {"status":"success","message":"Data logged successfully","row":2974}
+[Google Sheets] Status: 200 | Response: {"status":"success","message":"Data logged successfully","row":2975}
+Updated weather data
+
+--- Battery Prediction ---
+Current battery: 64%
+Temperature: 20.29°C (Deviation: 2.71°C)
+Wind speed: 1.82 m/s, Direction: 107°
+Drone heading: 304°
+Relative wind angle: 163.0°
+Temperature factor: 1.004
+Wind factor: 0.965
+Calculated drain rate: 0.97%/min
+Predicted time left: 66.0 minutes
+-------------------------
+
+[Google Sheets] Status: 200 | Response: {"status":"success","message":"Data logged successfully","row":2976}
+[Google Sheets] Status: 200 | Response: {"status":"success","message":"Data logged successfully","row":2977}
+[Google Sheets] Status: 200 | Response: {"status":"success","message":"Data logged successfully","row":2978}
+[Google Sheets] Status: 200 | Response: {"status":"success","message":"Data logged successfully","row":2979}
+[Google Sheets] Status: 200 | Response: {"status":"success","message":"Data logged successfully","row":2980}
+
+--- Battery Prediction ---
+Current battery: 64%
+Temperature: 18.23°C (Deviation: 4.77°C)
+Wind speed: 1.82 m/s, Direction: 107°
+Drone heading: 304°
+Relative wind angle: 163.0°
+Temperature factor: 1.011
+Wind factor: 0.965
+Calculated drain rate: 0.98%/min
+Predicted time left: 65.2 minutes
+-------------------------
+
+[Google Sheets] Status: 200 | Response: {"status":"success","message":"Data logged successfully","row":2981}
+[Google Sheets] Status: 200 | Response: {"status":"success","message":"Data logged successfully","row":2982}
+[Google Sheets] Status: 200 | Response: {"status":"success","message":"Data logged successfully","row":2983}
+[Google Sheets] Status: 200 | Response: {"status":"success","message":"Data logged successfully","row":2984}
+Updated weather data
+[Google Sheets] Status: 200 | Response: {"status":"success","message":"Data logged successfully","row":2985}
+
+--- Battery Prediction ---
+Current battery: 63%
+Temperature: 16.32°C (Deviation: 6.68°C)
+Wind speed: 1.82 m/s, Direction: 107°
+Drone heading: 304°
+Relative wind angle: 163.0°
+Temperature factor: 1.022
+Wind factor: 0.965
+Calculated drain rate: 0.99%/min
+Predicted time left: 64.2 minutes
+-------------------------
+
+[Google Sheets] Status: 200 | Response: {"status":"success","message":"Data logged successfully","row":2986}
+[Google Sheets] Status: 200 | Response: {"status":"success","message":"Data logged successfully","row":2987}
+[Google Sheets] Status: 200 | Response: {"status":"success","message":"Data logged successfully","row":2988}
+[Google Sheets] Status: 200 | Response: {"status":"success","message":"Data logged successfully","row":2989}
+[Google Sheets] Status: 200 | Response: {"status":"success","message":"Data logged successfully","row":2990}
+
+--- Battery Prediction ---
+Current battery: 63%
+Temperature: 14.42°C (Deviation: 8.58°C)
+Wind speed: 1.82 m/s, Direction: 107°
+Drone heading: 304°
+Relative wind angle: 163.0°
+Temperature factor: 1.037
+Wind factor: 0.965
+Calculated drain rate: 1.00%/min
+Predicted time left: 63.0 minutes
+-------------------------
+
+[Google Sheets] Status: 200 | Response: {"status":"success","message":"Data logged successfully","row":2991}
+[Google Sheets] Status: 200 | Response: {"status":"success","message":"Data logged successfully","row":2992}
+[Google Sheets] Status: 200 | Response: {"status":"success","message":"Data logged successfully","row":2993}
+Updated weather data
+[Google Sheets] Status: 200 | Response: {"status":"success","message":"Data logged successfully","row":2994}
+
+--- Battery Prediction ---
+Current battery: 63%
+Temperature: 12.60°C (Deviation: 10.40°C)
+Wind speed: 1.82 m/s, Direction: 107°
+Drone heading: 304°
+Relative wind angle: 163.0°
+Temperature factor: 1.054
+Wind factor: 0.965
+Calculated drain rate: 1.02%/min
+Predicted time left: 61.7 minutes
+-------------------------
+
+[Google Sheets] Status: 200 | Response: {"status":"success","message":"Data logged successfully","row":2995}
+[Google Sheets] Status: 200 | Response: {"status":"success","message":"Data logged successfully","row":2996}
+[Google Sheets] Status: 200 | Response: {"status":"success","message":"Data logged successfully","row":2997}
+[Google Sheets] Status: 200 | Response: {"status":"success","message":"Data logged successfully","row":2998}
+[Google Sheets] Status: 200 | Response: {"status":"success","message":"Data logged successfully","row":2999}
+
+--- Battery Prediction ---
+Current battery: 63%
+Temperature: 10.71°C (Deviation: 12.29°C)
+Wind speed: 1.82 m/s, Direction: 107°
+Drone heading: 304°
+Relative wind angle: 163.0°
+Temperature factor: 1.076
+Wind factor: 0.965
+Calculated drain rate: 1.04%/min
+Predicted time left: 60.2 minutes
+-------------------------
+
+[Google Sheets] Status: 200 | Response: {"status":"success","message":"Data logged successfully","row":3000}
+[Google Sheets] Status: 200 | Response: {"status":"success","message":"Data logged successfully","row":3001}
+[Google Sheets] Status: 200 | Response: {"status":"success","message":"Data logged successfully","row":3002}
+Updated weather data
+[Google Sheets] Status: 200 | Response: {"status":"success","message":"Data logged successfully","row":3003}
+[Google Sheets] Status: 200 | Response: {"status":"success","message":"Data logged successfully","row":3004}
+
+--- Battery Prediction ---
+Current battery: 62%
+Temperature: 8.80°C (Deviation: 14.20°C)
+Wind speed: 1.82 m/s, Direction: 107°
+Drone heading: 304°
+Relative wind angle: 163.0°
+Temperature factor: 1.101
+Wind factor: 0.965
+Calculated drain rate: 1.06%/min
+Predicted time left: 58.6 minutes
+-------------------------
+
+[Google Sheets] Status: 200 | Response: {"status":"success","message":"Data logged successfully","row":3005}
+[Google Sheets] Status: 200 | Response: {"status":"success","message":"Data logged successfully","row":3006}
