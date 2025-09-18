@@ -42,7 +42,9 @@ module screen_driver
 
   localparam SETUP_INSTRUCTIONS = 23;
   reg [(SETUP_INSTRUCTIONS*8)-1:0]
-//The below startup commands are needed for display initialisation...
+//----------------------------------------------------------
+  // Display initialization commands (for OLED/GLCD setup)
+  //----------------------------------------------------------
  startupCommands = {
     8'hAE, 8'h81, 8'h7F, 8'hA6, 8'h20, 8'h00, 8'hC8, 8'h40,
     8'hA1, 8'hA8, 8'h3F, 8'hD3, 8'h00, 8'hD5, 8'h80, 8'hD9,
