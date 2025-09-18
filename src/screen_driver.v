@@ -69,9 +69,11 @@ module screen_driver
 
   
 always @(posedge clk) begin
-  
-    
-
+  //------------------------------------------------------
+      // STATE 0: INIT_POWER
+      // Apply reset signal for a fixed period of time to ensure
+      // the display is properly reset before initialization.
+      //------------------------------------------------------
     case (state)
       STATE_INIT_POWER: begin
         counter <= counter + 1;
@@ -86,13 +88,12 @@ always @(posedge clk) begin
           counter <= 0;
         end
       end
-
-
-
-
-
-
-
+//------------------------------------------------------
+      // STATE 1: LOAD_INIT_CMD
+      // Load the next initialization command from the sequence.
+      // Set DC low (command mode), select the chip, and prepare
+      // the byte for SPI transfer.
+      //------------------------------------------------------
       STATE_LOAD_INIT_CMD: begin
         dc <= 0;
         dataToSend <= startupCommands[(commandIndex-1)-:8];
@@ -101,12 +102,11 @@ always @(posedge clk) begin
         commandIndex <= commandIndex - 8;
         state <= STATE_SEND;
       end
-
-
-
-
-
-
+//------------------------------------------------------
+      // STATE 2: SEND
+      // Shift out one byte of data (command or pixel data)
+      // using SPI protocol (bit-banging).
+      //------------------------------------------------------
       STATE_SEND: begin
     
 if (spiBitPhase == 0) begin
@@ -123,12 +123,11 @@ end else begin
 end
 
       end
-
-
-
-
-
-
+//------------------------------------------------------
+      // STATE 3: CHECK_FINISHED_INIT
+      // After sending a byte, check if initialization is complete
+      // or if we need to send more data/commands.
+      //------------------------------------------------------
       STATE_CHECK_FINISHED_INIT: begin
   cs <= 1;
   if (dc == 0) begin // Command phase
@@ -148,14 +147,11 @@ end
     end
   end
 end
-
-
-
-
-
-
-
-
+//------------------------------------------------------
+      // STATE 4: LOAD_DATA
+      // Load the next pixel data byte (patternByte) and prepare
+      // to send it over SPI.
+      //------------------------------------------------------
      STATE_LOAD_DATA: begin
   if (pixelCounter < 1024) begin
     cs <= 0;
@@ -167,14 +163,11 @@ end
     state <= STATE_WAIT_FRAME;
   end
 end
-
-
-
-
-
-
-
-
+ //------------------------------------------------------
+      // STATE 5: WAIT_FRAME
+      // Wait for the required frame interval before starting the
+      // next frame of pixel updates.
+      //------------------------------------------------------
 
 STATE_WAIT_FRAME: begin
   frameWaitCounter <= frameWaitCounter + 1;
@@ -186,8 +179,6 @@ STATE_WAIT_FRAME: begin
     state <= STATE_LOAD_DATA;
   end
 end
-
-
 
 
 
