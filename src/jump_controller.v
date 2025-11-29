@@ -14,10 +14,19 @@ module jump_controller (
   // Register indicating whether the Dino is currently jumping
   reg jumping = 0;
 
+  //Ensure that we jump on button press(state change), and not when button is kept pressed forever
+  reg prevbtn1 = 1'b1;
+  wire btn1pressed = (prevbtn1 == 1'b1) && (btn1 == 1'b0);
+
+  //Combination logic so that we can jump properly.
+  always @(posedge clk) begin
+   prevbtn1 <= btn1;
+  end
+
   // Main control logic triggered on every rising edge of the clock
   always @(posedge clk) begin
     // Start of a new jump when not already jumping and button is pressed
-    if (!jumping && !btn1) begin
+    if (!jumping && btn1pressed) begin
       jumping <= 1;           // Set jumping state to true
       jumpCounter <= 0;       // Reset the jump duration counter
       jumpOffset <= 1;        // Activate jump output (Dino goes up)

@@ -1,5 +1,3 @@
-//`default_nettype none
-
 module screen_driver
 #(
   parameter STARTUP_WAIT = 32'd10000000,    //10000000 for 27mhz

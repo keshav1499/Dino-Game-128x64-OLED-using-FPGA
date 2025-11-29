@@ -1,4 +1,3 @@
-//`default_nettype none
 
 module top #(
   parameter STARTUP_WAIT = 32'd10000000,
@@ -49,8 +48,16 @@ jump_controller jump_inst (
     .pixelIndex(pixelIndex),
     .frameNumber(frameNumbers),
     .patternByte(patternByte),
-    .jumpOffset(jumpOffset)
+    .jumpOffset(jumpOffset),
+    .button(btn1)
   );
 
 
 endmodule
+
+
+
+
+
+
+
