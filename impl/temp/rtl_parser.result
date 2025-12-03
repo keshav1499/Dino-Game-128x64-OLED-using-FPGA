@@ -1,33 +1,33 @@
 [
  {
-  "InstFile" : "/home/tallguydesi/Documents/GitHub/Dino-Game-128x64-OLED-using-FPGA/src/top.v",
-  "InstLine" : 3,
+  "InstFile" : "/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/top.v",
+  "InstLine" : 2,
   "InstName" : "top",
-  "ModuleFile" : "/home/tallguydesi/Documents/GitHub/Dino-Game-128x64-OLED-using-FPGA/src/top.v",
-  "ModuleLine" : 3,
+  "ModuleFile" : "/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/top.v",
+  "ModuleLine" : 2,
   "ModuleName" : "top",
   "SubInsts" : [
    {
-    "InstFile" : "/home/tallguydesi/Documents/GitHub/Dino-Game-128x64-OLED-using-FPGA/src/top.v",
-    "InstLine" : 25,
+    "InstFile" : "/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/top.v",
+    "InstLine" : 24,
     "InstName" : "driver",
-    "ModuleFile" : "/home/tallguydesi/Documents/GitHub/Dino-Game-128x64-OLED-using-FPGA/src/screen_driver.v",
-    "ModuleLine" : 3,
+    "ModuleFile" : "/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/screen_driver.v",
+    "ModuleLine" : 1,
     "ModuleName" : "screen_driver"
    },
    {
-    "InstFile" : "/home/tallguydesi/Documents/GitHub/Dino-Game-128x64-OLED-using-FPGA/src/top.v",
-    "InstLine" : 40,
+    "InstFile" : "/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/top.v",
+    "InstLine" : 39,
     "InstName" : "jump_inst",
-    "ModuleFile" : "/home/tallguydesi/Documents/GitHub/Dino-Game-128x64-OLED-using-FPGA/src/jump_controller.v",
+    "ModuleFile" : "/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/jump_controller.v",
     "ModuleLine" : 1,
     "ModuleName" : "jump_controller"
    },
    {
-    "InstFile" : "/home/tallguydesi/Documents/GitHub/Dino-Game-128x64-OLED-using-FPGA/src/top.v",
-    "InstLine" : 48,
+    "InstFile" : "/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/top.v",
+    "InstLine" : 47,
     "InstName" : "patternGen",
-    "ModuleFile" : "/home/tallguydesi/Documents/GitHub/Dino-Game-128x64-OLED-using-FPGA/src/pattern_generator.v",
+    "ModuleFile" : "/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/pattern_generator.v",
     "ModuleLine" : 1,
     "ModuleName" : "pattern_generator"
    }

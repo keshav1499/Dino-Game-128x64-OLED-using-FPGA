@@ -10,6 +10,9 @@
         <File path="src/screen_driver.v" type="file.verilog" enable="1"/>
         <File path="src/top.v" type="file.verilog" enable="1"/>
         <File path="src/Functional_60FPS.cst" type="file.cst" enable="1"/>
+        <File path="src/ABCDEF.hex" type="file.other" enable="1"/>
         <File path="src/cat_sprite.hex" type="file.other" enable="1"/>
+        <File path="src/gameover.hex" type="file.other" enable="1"/>
+        <File path="src/startgame.hex" type="file.other" enable="1"/>
     </FileList>
 </Project>
