@@ -5,6 +5,7 @@ Analyzing Verilog file '/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-
 Analyzing Verilog file '/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/screen_driver.v'
 WARN  (EX3628) : Redeclaration of ANSI port 'frameNumber' is not allowed("/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/screen_driver.v":39)
 Analyzing Verilog file '/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/top.v'
+Analyzing Verilog file '/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/score_logic.v'
 Compiling module 'top'("/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/top.v":2)
 Compiling module 'screen_driver(STARTUP_WAIT=32'b00000000100110001001011010000000,FRAME_WAIT=32'b00000000000001101101110111010000)'("/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/screen_driver.v":1)
 WARN  (EX3780) : Using initial value of 'startupCommands' since it is never assigned("/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/screen_driver.v":46)
@@ -19,7 +20,11 @@ Compiling module 'pattern_generator'("/home/tallguydesi/Documents/Dino-Game-128x
 Extracting RAM for identifier 'catSprite'("/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/pattern_generator.v":16)
 Extracting RAM for identifier 'gameOver'("/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/pattern_generator.v":20)
 Extracting RAM for identifier 'startGame'("/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/pattern_generator.v":24)
-Extracting RAM for identifier 'abcdef'("/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/pattern_generator.v":28)
+Extracting RAM for identifier 'score'("/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/pattern_generator.v":28)
+WARN  (EX3988) : Cannot open file 'cat_sprite.hex'("/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/pattern_generator.v":17)
+WARN  (EX3988) : Cannot open file 'gameover.hex'("/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/pattern_generator.v":21)
+WARN  (EX3988) : Cannot open file 'startgame.hex'("/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/pattern_generator.v":25)
+WARN  (EX3988) : Cannot open file 'SCORE.hex'("/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/pattern_generator.v":29)
 WARN  (EX3791) : Expression size 32 truncated to fit in target size 7("/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/pattern_generator.v":44)
 WARN  (EX3791) : Expression size 8 truncated to fit in target size 7("/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/pattern_generator.v":45)
 WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/pattern_generator.v":150)

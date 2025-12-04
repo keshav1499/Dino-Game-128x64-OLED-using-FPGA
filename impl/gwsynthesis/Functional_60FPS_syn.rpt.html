@@ -59,6 +59,7 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 /home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/pattern_generator.v<br>
 /home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/screen_driver.v<br>
 /home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/top.v<br>
+/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/score_logic.v<br>
 </td>
 </tr>
 <tr>
@@ -83,7 +84,7 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 </tr>
 <tr>
 <td class="label">Created Time</td>
-<td>Wed Dec  3 13:55:41 2025
+<td>Thu Dec  4 07:20:46 2025
 </td>
 </tr>
 <tr>
@@ -99,11 +100,11 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 </tr>
 <tr>
 <td class="label">Synthesis Process</td>
-<td>Running parser:<br/>&nbsp;&nbsp;&nbsp;&nbsp;CPU time = 0h 0m 0.112s, Elapsed time = 0h 0m 0.096s, Peak memory usage = 508.516MB<br/>Running netlist conversion:<br/>&nbsp;&nbsp;&nbsp;&nbsp;CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s, Peak memory usage = 0MB<br/>Running device independent optimization:<br/>&nbsp;&nbsp;&nbsp;&nbsp;Optimizing Phase 0: CPU time = 0h 0m 0.012s, Elapsed time = 0h 0m 0.011s, Peak memory usage = 508.516MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Optimizing Phase 1: CPU time = 0h 0m 0.004s, Elapsed time = 0h 0m 0.003s, Peak memory usage = 508.516MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Optimizing Phase 2: CPU time = 0h 0m 0.012s, Elapsed time = 0h 0m 0.011s, Peak memory usage = 508.516MB<br/>Running inference:<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 0: CPU time = 0h 0m 0.007s, Elapsed time = 0h 0m 0.006s, Peak memory usage = 508.516MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 1: CPU time = 0h 0m 0.002s, Elapsed time = 0h 0m 0.002s, Peak memory usage = 508.516MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 2: CPU time = 0h 0m 0.001s, Elapsed time = 0h 0m 0.001s, Peak memory usage = 508.516MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 3: CPU time = 0h 0m 0.001s, Elapsed time = 0h 0m 0.001s, Peak memory usage = 508.516MB<br/>Running technical mapping:<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 0: CPU time = 0h 0m 0.027s, Elapsed time = 0h 0m 0.025s, Peak memory usage = 508.516MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 1: CPU time = 0h 0m 0.003s, Elapsed time = 0h 0m 0.002s, Peak memory usage = 508.516MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 2: CPU time = 0h 0m 0.004s, Elapsed time = 0h 0m 0.004s, Peak memory usage = 508.516MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 3: CPU time = 0h 0m 2s, Elapsed time = 0h 0m 2s, Peak memory usage = 508.516MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 4: CPU time = 0h 0m 0.05s, Elapsed time = 0h 0m 0.05s, Peak memory usage = 508.516MB<br/>Generate output files:<br/>&nbsp;&nbsp;&nbsp;&nbsp;CPU time = 0h 0m 0.02s, Elapsed time = 0h 0m 0.02s, Peak memory usage = 508.516MB<br/></td>
+<td>Running parser:<br/>&nbsp;&nbsp;&nbsp;&nbsp;CPU time = 0h 0m 0.106s, Elapsed time = 0h 0m 0.091s, Peak memory usage = 577.680MB<br/>Running netlist conversion:<br/>&nbsp;&nbsp;&nbsp;&nbsp;CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s, Peak memory usage = 0MB<br/>Running device independent optimization:<br/>&nbsp;&nbsp;&nbsp;&nbsp;Optimizing Phase 0: CPU time = 0h 0m 0.012s, Elapsed time = 0h 0m 0.011s, Peak memory usage = 577.680MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Optimizing Phase 1: CPU time = 0h 0m 0.003s, Elapsed time = 0h 0m 0.003s, Peak memory usage = 577.680MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Optimizing Phase 2: CPU time = 0h 0m 0.011s, Elapsed time = 0h 0m 0.01s, Peak memory usage = 577.680MB<br/>Running inference:<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 0: CPU time = 0h 0m 0.004s, Elapsed time = 0h 0m 0.003s, Peak memory usage = 577.680MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 1: CPU time = 0h 0m 0.001s, Elapsed time = 0h 0m 0.001s, Peak memory usage = 577.680MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 2: CPU time = 0h 0m 0.001s, Elapsed time = 0h 0m 0s, Peak memory usage = 577.680MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 3: CPU time = 0h 0m 0.001s, Elapsed time = 0h 0m 0.001s, Peak memory usage = 577.680MB<br/>Running technical mapping:<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 0: CPU time = 0h 0m 0.013s, Elapsed time = 0h 0m 0.013s, Peak memory usage = 577.680MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 1: CPU time = 0h 0m 0.002s, Elapsed time = 0h 0m 0.002s, Peak memory usage = 577.680MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 2: CPU time = 0h 0m 0.002s, Elapsed time = 0h 0m 0.001s, Peak memory usage = 577.680MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 3: CPU time = 0h 0m 1s, Elapsed time = 0h 0m 1s, Peak memory usage = 577.680MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 4: CPU time = 0h 0m 0.06s, Elapsed time = 0h 0m 0.054s, Peak memory usage = 577.680MB<br/>Generate output files:<br/>&nbsp;&nbsp;&nbsp;&nbsp;CPU time = 0h 0m 0.019s, Elapsed time = 0h 0m 0.016s, Peak memory usage = 577.680MB<br/></td>
 </tr>
 <tr>
 <td class="label">Total Time and Memory Usage</td>
-<td>CPU time = 0h 0m 2s, Elapsed time = 0h 0m 2s, Peak memory usage = 508.516MB</td>
+<td>CPU time = 0h 0m 1s, Elapsed time = 0h 0m 1s, Peak memory usage = 577.680MB</td>
 </tr>
 </table>
 <h1><a name="resource">Resource</a></h1>
@@ -151,27 +152,27 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspDFFR</td>
-<td>2</td>
+<td>3</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspDFFRE</td>
-<td>104</td>
+<td>103</td>
 </tr>
 <tr>
 <td class="label"><b>LUT </b></td>
-<td>272</td>
+<td>173</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspLUT2</td>
-<td>30</td>
+<td>14</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspLUT3</td>
-<td>62</td>
+<td>52</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspLUT4</td>
-<td>180</td>
+<td>107</td>
 </tr>
 <tr>
 <td class="label"><b>ALU </b></td>
@@ -183,18 +184,10 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 </tr>
 <tr>
 <td class="label"><b>INV </b></td>
-<td>2</td>
-</tr>
-<tr>
-<td class="label">&nbsp&nbsp&nbsp&nbspINV</td>
-<td>2</td>
-</tr>
-<tr>
-<td class="label"><b>BSRAM </b></td>
 <td>1</td>
 </tr>
 <tr>
-<td class="label">&nbsp&nbsp&nbsp&nbsppROM</td>
+<td class="label">&nbsp&nbsp&nbsp&nbspINV</td>
 <td>1</td>
 </tr>
 </table>
@@ -207,8 +200,8 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 </tr>
 <tr>
 <td class="label">Logic</td>
-<td>382(274 LUT, 108 ALU) / 8640</td>
-<td>5%</td>
+<td>282(174 LUT, 108 ALU) / 8640</td>
+<td>4%</td>
 </tr>
 <tr>
 <td class="label">Register</td>
@@ -227,8 +220,8 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 </tr>
 <tr>
 <td class="label">BSRAM</td>
-<td>1 / 26</td>
-<td>4%</td>
+<td>0 / 26</td>
+<td>0%</td>
 </tr>
 </table>
 <h1><a name="timing">Timing</a></h1>
@@ -285,7 +278,7 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <td>1</td>
 <td>clk</td>
 <td>50.000(MHz)</td>
-<td>70.895(MHz)</td>
+<td>71.234(MHz)</td>
 <td>7</td>
 <td>TOP</td>
 </tr>
@@ -293,8 +286,8 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <td>2</td>
 <td>pattern_generator/frameNumbers[0]</td>
 <td>50.000(MHz)</td>
-<td>62.186(MHz)</td>
-<td>5</td>
+<td>43.705(MHz)</td>
+<td>7</td>
 <td>TOP</td>
 </tr>
 </table>
@@ -304,11 +297,467 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <table class="summary_table">
 <tr>
 <td class="label">Slack</td>
-<td>-2.674</td>
+<td>-1.440</td>
 </tr>
 <tr>
 <td class="label">Data Arrival Time</td>
-<td>22.970</td>
+<td>22.123</td>
+</tr>
+<tr>
+<td class="label">Data Required Time</td>
+<td>20.683</td>
+</tr>
+<tr>
+<td class="label">From</td>
+<td>driver/n955_s39</td>
+</tr>
+<tr>
+<td class="label">To</td>
+<td>patternGen/currentState_1_s0</td>
+</tr>
+<tr>
+<td class="label">Launch Clk</td>
+<td>pattern_generator/frameNumbers[0][R]</td>
+</tr>
+<tr>
+<td class="label">Latch Clk</td>
+<td>pattern_generator/frameNumbers[0][F]</td>
+</tr>
+</table>
+<b>Data Arrival Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>10.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>pattern_generator/frameNumbers[0]</td>
+</tr>
+<tr>
+<td>10.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>FF</td>
+<td>18</td>
+<td>driver/frameNumber_0_s1/Q</td>
+</tr>
+<tr>
+<td>10.960</td>
+<td>0.960</td>
+<td>tNET</td>
+<td>FF</td>
+<td>1</td>
+<td>driver/n955_s39/I0</td>
+</tr>
+<tr>
+<td>11.992</td>
+<td>1.032</td>
+<td>tINS</td>
+<td>FF</td>
+<td>3</td>
+<td>driver/n955_s39/F</td>
+</tr>
+<tr>
+<td>12.952</td>
+<td>0.960</td>
+<td>tNET</td>
+<td>FF</td>
+<td>1</td>
+<td>driver/n955_s25/I3</td>
+</tr>
+<tr>
+<td>13.578</td>
+<td>0.626</td>
+<td>tINS</td>
+<td>FF</td>
+<td>5</td>
+<td>driver/n955_s25/F</td>
+</tr>
+<tr>
+<td>14.538</td>
+<td>0.960</td>
+<td>tNET</td>
+<td>FF</td>
+<td>1</td>
+<td>driver/n955_s47/I0</td>
+</tr>
+<tr>
+<td>15.570</td>
+<td>1.032</td>
+<td>tINS</td>
+<td>FF</td>
+<td>1</td>
+<td>driver/n955_s47/F</td>
+</tr>
+<tr>
+<td>16.530</td>
+<td>0.960</td>
+<td>tNET</td>
+<td>FF</td>
+<td>1</td>
+<td>driver/n955_s17/I1</td>
+</tr>
+<tr>
+<td>17.629</td>
+<td>1.099</td>
+<td>tINS</td>
+<td>FF</td>
+<td>2</td>
+<td>driver/n955_s17/F</td>
+</tr>
+<tr>
+<td>18.589</td>
+<td>0.960</td>
+<td>tNET</td>
+<td>FF</td>
+<td>1</td>
+<td>patternGen/currentState_0_s3/I2</td>
+</tr>
+<tr>
+<td>19.411</td>
+<td>0.822</td>
+<td>tINS</td>
+<td>FF</td>
+<td>1</td>
+<td>patternGen/currentState_0_s3/F</td>
+</tr>
+<tr>
+<td>20.371</td>
+<td>0.960</td>
+<td>tNET</td>
+<td>FF</td>
+<td>1</td>
+<td>patternGen/currentState_0_s2/I0</td>
+</tr>
+<tr>
+<td>21.397</td>
+<td>1.026</td>
+<td>tINS</td>
+<td>FR</td>
+<td>2</td>
+<td>patternGen/currentState_0_s2/F</td>
+</tr>
+<tr>
+<td>22.123</td>
+<td>0.726</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>patternGen/currentState_1_s0/CE</td>
+</tr>
+</table>
+<b>Data Required Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>pattern_generator/frameNumbers[0]</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>18</td>
+<td>driver/frameNumber_0_s1/Q</td>
+</tr>
+<tr>
+<td>20.726</td>
+<td>0.726</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>patternGen/currentState_1_s0/CLK</td>
+</tr>
+<tr>
+<td>20.683</td>
+<td>-0.043</td>
+<td>tSu</td>
+<td> </td>
+<td>1</td>
+<td>patternGen/currentState_1_s0</td>
+</tr>
+</table>
+<b>Path Statistics:</b>
+<table class="summary_table">
+<tr>
+<td class="label">Clock Skew:</td>
+<td>0.726</td>
+</tr>
+<tr>
+<td class="label">Setup Relationship:</td>
+<td>10.000</td>
+</tr>
+<tr>
+<td class="label">Logic Level:</td>
+<td>7</td>
+</tr>
+<tr>
+<td class="label">Arrival Clock Path Delay:</td><td> cell: 0.000, 100.000%; route: 0.000, 0.000%</td></tr>
+<tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 5.637, 46.498%; route: 5.526, 45.583%; tC2Q: 0.960, 7.919%</td></tr>
+<tr>
+<td class="label">Required Clock Path Delay:</td><td> cell: 0.000, 100.000%; route: 0.000, 0.000%</td></tr>
+</table>
+<br/>
+<h3>Path&nbsp2</h3>
+<b>Path Summary:</b></br>
+<table class="summary_table">
+<tr>
+<td class="label">Slack</td>
+<td>-1.440</td>
+</tr>
+<tr>
+<td class="label">Data Arrival Time</td>
+<td>22.123</td>
+</tr>
+<tr>
+<td class="label">Data Required Time</td>
+<td>20.683</td>
+</tr>
+<tr>
+<td class="label">From</td>
+<td>driver/n955_s39</td>
+</tr>
+<tr>
+<td class="label">To</td>
+<td>patternGen/currentState_0_s0</td>
+</tr>
+<tr>
+<td class="label">Launch Clk</td>
+<td>pattern_generator/frameNumbers[0][R]</td>
+</tr>
+<tr>
+<td class="label">Latch Clk</td>
+<td>pattern_generator/frameNumbers[0][F]</td>
+</tr>
+</table>
+<b>Data Arrival Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>10.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>pattern_generator/frameNumbers[0]</td>
+</tr>
+<tr>
+<td>10.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>FF</td>
+<td>18</td>
+<td>driver/frameNumber_0_s1/Q</td>
+</tr>
+<tr>
+<td>10.960</td>
+<td>0.960</td>
+<td>tNET</td>
+<td>FF</td>
+<td>1</td>
+<td>driver/n955_s39/I0</td>
+</tr>
+<tr>
+<td>11.992</td>
+<td>1.032</td>
+<td>tINS</td>
+<td>FF</td>
+<td>3</td>
+<td>driver/n955_s39/F</td>
+</tr>
+<tr>
+<td>12.952</td>
+<td>0.960</td>
+<td>tNET</td>
+<td>FF</td>
+<td>1</td>
+<td>driver/n955_s25/I3</td>
+</tr>
+<tr>
+<td>13.578</td>
+<td>0.626</td>
+<td>tINS</td>
+<td>FF</td>
+<td>5</td>
+<td>driver/n955_s25/F</td>
+</tr>
+<tr>
+<td>14.538</td>
+<td>0.960</td>
+<td>tNET</td>
+<td>FF</td>
+<td>1</td>
+<td>driver/n955_s47/I0</td>
+</tr>
+<tr>
+<td>15.570</td>
+<td>1.032</td>
+<td>tINS</td>
+<td>FF</td>
+<td>1</td>
+<td>driver/n955_s47/F</td>
+</tr>
+<tr>
+<td>16.530</td>
+<td>0.960</td>
+<td>tNET</td>
+<td>FF</td>
+<td>1</td>
+<td>driver/n955_s17/I1</td>
+</tr>
+<tr>
+<td>17.629</td>
+<td>1.099</td>
+<td>tINS</td>
+<td>FF</td>
+<td>2</td>
+<td>driver/n955_s17/F</td>
+</tr>
+<tr>
+<td>18.589</td>
+<td>0.960</td>
+<td>tNET</td>
+<td>FF</td>
+<td>1</td>
+<td>patternGen/currentState_0_s3/I2</td>
+</tr>
+<tr>
+<td>19.411</td>
+<td>0.822</td>
+<td>tINS</td>
+<td>FF</td>
+<td>1</td>
+<td>patternGen/currentState_0_s3/F</td>
+</tr>
+<tr>
+<td>20.371</td>
+<td>0.960</td>
+<td>tNET</td>
+<td>FF</td>
+<td>1</td>
+<td>patternGen/currentState_0_s2/I0</td>
+</tr>
+<tr>
+<td>21.397</td>
+<td>1.026</td>
+<td>tINS</td>
+<td>FR</td>
+<td>2</td>
+<td>patternGen/currentState_0_s2/F</td>
+</tr>
+<tr>
+<td>22.123</td>
+<td>0.726</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>patternGen/currentState_0_s0/CE</td>
+</tr>
+</table>
+<b>Data Required Path:</b>
+<table class="summary_table">
+<tr>
+<th>AT</th>
+<th>DELAY</th>
+<th>TYPE</th>
+<th>RF</th>
+<th>FANOUT</th>
+<th>NODE</th>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>pattern_generator/frameNumbers[0]</td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0.000</td>
+<td>tCL</td>
+<td>RR</td>
+<td>18</td>
+<td>driver/frameNumber_0_s1/Q</td>
+</tr>
+<tr>
+<td>20.726</td>
+<td>0.726</td>
+<td>tNET</td>
+<td>RR</td>
+<td>1</td>
+<td>patternGen/currentState_0_s0/CLK</td>
+</tr>
+<tr>
+<td>20.683</td>
+<td>-0.043</td>
+<td>tSu</td>
+<td> </td>
+<td>1</td>
+<td>patternGen/currentState_0_s0</td>
+</tr>
+</table>
+<b>Path Statistics:</b>
+<table class="summary_table">
+<tr>
+<td class="label">Clock Skew:</td>
+<td>0.726</td>
+</tr>
+<tr>
+<td class="label">Setup Relationship:</td>
+<td>10.000</td>
+</tr>
+<tr>
+<td class="label">Logic Level:</td>
+<td>7</td>
+</tr>
+<tr>
+<td class="label">Arrival Clock Path Delay:</td><td> cell: 0.000, 100.000%; route: 0.000, 0.000%</td></tr>
+<tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 5.637, 46.498%; route: 5.526, 45.583%; tC2Q: 0.960, 7.919%</td></tr>
+<tr>
+<td class="label">Required Clock Path Delay:</td><td> cell: 0.000, 100.000%; route: 0.000, 0.000%</td></tr>
+</table>
+<br/>
+<h3>Path&nbsp3</h3>
+<b>Path Summary:</b></br>
+<table class="summary_table">
+<tr>
+<td class="label">Slack</td>
+<td>-2.478</td>
+</tr>
+<tr>
+<td class="label">Data Arrival Time</td>
+<td>22.774</td>
 </tr>
 <tr>
 <td class="label">Data Required Time</td>
@@ -316,7 +765,7 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 </tr>
 <tr>
 <td class="label">From</td>
-<td>driver/n955_s41</td>
+<td>driver/n955_s45</td>
 </tr>
 <tr>
 <td class="label">To</td>
@@ -363,82 +812,82 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>driver/n955_s41/I2</td>
+<td>driver/n955_s45/I1</td>
 </tr>
 <tr>
-<td>11.782</td>
-<td>0.822</td>
+<td>12.059</td>
+<td>1.099</td>
 <td>tINS</td>
 <td>FF</td>
-<td>3</td>
-<td>driver/n955_s41/F</td>
+<td>1</td>
+<td>driver/n955_s45/F</td>
 </tr>
 <tr>
-<td>12.742</td>
+<td>13.019</td>
 <td>0.960</td>
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>driver/n955_s35/I1</td>
+<td>driver/n955_s43/I1</td>
 </tr>
 <tr>
-<td>13.841</td>
+<td>14.118</td>
 <td>1.099</td>
 <td>tINS</td>
 <td>FF</td>
 <td>2</td>
-<td>driver/n955_s35/F</td>
+<td>driver/n955_s43/F</td>
 </tr>
 <tr>
-<td>14.801</td>
+<td>15.078</td>
 <td>0.960</td>
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>driver/n955_s26/I1</td>
+<td>driver/n955_s32/I1</td>
 </tr>
 <tr>
-<td>15.900</td>
+<td>16.177</td>
 <td>1.099</td>
 <td>tINS</td>
 <td>FF</td>
 <td>1</td>
-<td>driver/n955_s26/F</td>
+<td>driver/n955_s32/F</td>
 </tr>
 <tr>
-<td>16.860</td>
+<td>17.137</td>
 <td>0.960</td>
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>driver/n955_s15/I0</td>
+<td>driver/n955_s19/I0</td>
 </tr>
 <tr>
-<td>17.892</td>
+<td>18.169</td>
 <td>1.032</td>
 <td>tINS</td>
 <td>FF</td>
-<td>3</td>
-<td>driver/n955_s15/F</td>
+<td>1</td>
+<td>driver/n955_s19/F</td>
 </tr>
 <tr>
-<td>18.852</td>
+<td>19.129</td>
 <td>0.960</td>
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>driver/n955_s10/I1</td>
+<td>driver/n955_s11/I3</td>
 </tr>
 <tr>
-<td>19.951</td>
-<td>1.099</td>
+<td>19.755</td>
+<td>0.626</td>
 <td>tINS</td>
 <td>FF</td>
-<td>5</td>
-<td>driver/n955_s10/F</td>
+<td>8</td>
+<td>driver/n955_s11/F</td>
 </tr>
 <tr>
-<td>20.911</td>
+<td>20.715</td>
 <td>0.960</td>
 <td>tNET</td>
 <td>FF</td>
@@ -446,7 +895,7 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <td>driver/n961_s9/I1</td>
 </tr>
 <tr>
-<td>22.010</td>
+<td>21.814</td>
 <td>1.099</td>
 <td>tINS</td>
 <td>FF</td>
@@ -454,7 +903,7 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <td>driver/n961_s9/F</td>
 </tr>
 <tr>
-<td>22.970</td>
+<td>22.774</td>
 <td>0.960</td>
 <td>tNET</td>
 <td>FF</td>
@@ -493,7 +942,7 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <td>0.000</td>
 <td>tINS</td>
 <td>RR</td>
-<td>144</td>
+<td>143</td>
 <td>clk_ibuf/O</td>
 </tr>
 <tr>
@@ -538,21 +987,21 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <tr>
 <td class="label">Arrival Clock Path Delay:</td><td> cell: 0.000, 100.000%; route: 0.000, 0.000%</td></tr>
 <tr>
-<td class="label">Arrival Data Path Delay:</td><td> cell: 6.250, 48.188%; route: 5.760, 44.410%; tC2Q: 0.960, 7.402%</td></tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 6.054, 47.393%; route: 5.760, 45.092%; tC2Q: 0.960, 7.515%</td></tr>
 <tr>
 <td class="label">Required Clock Path Delay:</td><td> cell: 0.000, 100.000%; route: 0.000, 0.000%</td></tr>
 </table>
 <br/>
-<h3>Path&nbsp2</h3>
+<h3>Path&nbsp4</h3>
 <b>Path Summary:</b></br>
 <table class="summary_table">
 <tr>
 <td class="label">Slack</td>
-<td>-2.674</td>
+<td>-2.478</td>
 </tr>
 <tr>
 <td class="label">Data Arrival Time</td>
-<td>22.970</td>
+<td>22.774</td>
 </tr>
 <tr>
 <td class="label">Data Required Time</td>
@@ -560,7 +1009,7 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 </tr>
 <tr>
 <td class="label">From</td>
-<td>driver/n955_s41</td>
+<td>driver/n955_s45</td>
 </tr>
 <tr>
 <td class="label">To</td>
@@ -607,82 +1056,82 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>driver/n955_s41/I2</td>
+<td>driver/n955_s45/I1</td>
 </tr>
 <tr>
-<td>11.782</td>
-<td>0.822</td>
+<td>12.059</td>
+<td>1.099</td>
 <td>tINS</td>
 <td>FF</td>
-<td>3</td>
-<td>driver/n955_s41/F</td>
+<td>1</td>
+<td>driver/n955_s45/F</td>
 </tr>
 <tr>
-<td>12.742</td>
+<td>13.019</td>
 <td>0.960</td>
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>driver/n955_s35/I1</td>
+<td>driver/n955_s43/I1</td>
 </tr>
 <tr>
-<td>13.841</td>
+<td>14.118</td>
 <td>1.099</td>
 <td>tINS</td>
 <td>FF</td>
 <td>2</td>
-<td>driver/n955_s35/F</td>
+<td>driver/n955_s43/F</td>
 </tr>
 <tr>
-<td>14.801</td>
+<td>15.078</td>
 <td>0.960</td>
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>driver/n955_s26/I1</td>
+<td>driver/n955_s32/I1</td>
 </tr>
 <tr>
-<td>15.900</td>
+<td>16.177</td>
 <td>1.099</td>
 <td>tINS</td>
 <td>FF</td>
 <td>1</td>
-<td>driver/n955_s26/F</td>
+<td>driver/n955_s32/F</td>
 </tr>
 <tr>
-<td>16.860</td>
+<td>17.137</td>
 <td>0.960</td>
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>driver/n955_s15/I0</td>
+<td>driver/n955_s19/I0</td>
 </tr>
 <tr>
-<td>17.892</td>
+<td>18.169</td>
 <td>1.032</td>
 <td>tINS</td>
 <td>FF</td>
-<td>3</td>
-<td>driver/n955_s15/F</td>
+<td>1</td>
+<td>driver/n955_s19/F</td>
 </tr>
 <tr>
-<td>18.852</td>
+<td>19.129</td>
 <td>0.960</td>
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>driver/n955_s10/I1</td>
+<td>driver/n955_s11/I3</td>
 </tr>
 <tr>
-<td>19.951</td>
-<td>1.099</td>
+<td>19.755</td>
+<td>0.626</td>
 <td>tINS</td>
 <td>FF</td>
-<td>5</td>
-<td>driver/n955_s10/F</td>
+<td>8</td>
+<td>driver/n955_s11/F</td>
 </tr>
 <tr>
-<td>20.911</td>
+<td>20.715</td>
 <td>0.960</td>
 <td>tNET</td>
 <td>FF</td>
@@ -690,7 +1139,7 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <td>driver/n960_s9/I1</td>
 </tr>
 <tr>
-<td>22.010</td>
+<td>21.814</td>
 <td>1.099</td>
 <td>tINS</td>
 <td>FF</td>
@@ -698,7 +1147,7 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <td>driver/n960_s9/F</td>
 </tr>
 <tr>
-<td>22.970</td>
+<td>22.774</td>
 <td>0.960</td>
 <td>tNET</td>
 <td>FF</td>
@@ -737,7 +1186,7 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <td>0.000</td>
 <td>tINS</td>
 <td>RR</td>
-<td>144</td>
+<td>143</td>
 <td>clk_ibuf/O</td>
 </tr>
 <tr>
@@ -782,21 +1231,21 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <tr>
 <td class="label">Arrival Clock Path Delay:</td><td> cell: 0.000, 100.000%; route: 0.000, 0.000%</td></tr>
 <tr>
-<td class="label">Arrival Data Path Delay:</td><td> cell: 6.250, 48.188%; route: 5.760, 44.410%; tC2Q: 0.960, 7.402%</td></tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 6.054, 47.393%; route: 5.760, 45.092%; tC2Q: 0.960, 7.515%</td></tr>
 <tr>
 <td class="label">Required Clock Path Delay:</td><td> cell: 0.000, 100.000%; route: 0.000, 0.000%</td></tr>
 </table>
 <br/>
-<h3>Path&nbsp3</h3>
+<h3>Path&nbsp5</h3>
 <b>Path Summary:</b></br>
 <table class="summary_table">
 <tr>
 <td class="label">Slack</td>
-<td>-2.674</td>
+<td>-2.478</td>
 </tr>
 <tr>
 <td class="label">Data Arrival Time</td>
-<td>22.970</td>
+<td>22.774</td>
 </tr>
 <tr>
 <td class="label">Data Required Time</td>
@@ -804,7 +1253,7 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 </tr>
 <tr>
 <td class="label">From</td>
-<td>driver/n955_s41</td>
+<td>driver/n955_s45</td>
 </tr>
 <tr>
 <td class="label">To</td>
@@ -851,82 +1300,82 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>driver/n955_s41/I2</td>
+<td>driver/n955_s45/I1</td>
 </tr>
 <tr>
-<td>11.782</td>
-<td>0.822</td>
+<td>12.059</td>
+<td>1.099</td>
 <td>tINS</td>
 <td>FF</td>
-<td>3</td>
-<td>driver/n955_s41/F</td>
+<td>1</td>
+<td>driver/n955_s45/F</td>
 </tr>
 <tr>
-<td>12.742</td>
+<td>13.019</td>
 <td>0.960</td>
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>driver/n955_s35/I1</td>
+<td>driver/n955_s43/I1</td>
 </tr>
 <tr>
-<td>13.841</td>
+<td>14.118</td>
 <td>1.099</td>
 <td>tINS</td>
 <td>FF</td>
 <td>2</td>
-<td>driver/n955_s35/F</td>
+<td>driver/n955_s43/F</td>
 </tr>
 <tr>
-<td>14.801</td>
+<td>15.078</td>
 <td>0.960</td>
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>driver/n955_s26/I1</td>
+<td>driver/n955_s32/I1</td>
 </tr>
 <tr>
-<td>15.900</td>
+<td>16.177</td>
 <td>1.099</td>
 <td>tINS</td>
 <td>FF</td>
 <td>1</td>
-<td>driver/n955_s26/F</td>
+<td>driver/n955_s32/F</td>
 </tr>
 <tr>
-<td>16.860</td>
+<td>17.137</td>
 <td>0.960</td>
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>driver/n955_s15/I0</td>
+<td>driver/n955_s19/I0</td>
 </tr>
 <tr>
-<td>17.892</td>
+<td>18.169</td>
 <td>1.032</td>
 <td>tINS</td>
 <td>FF</td>
-<td>3</td>
-<td>driver/n955_s15/F</td>
+<td>1</td>
+<td>driver/n955_s19/F</td>
 </tr>
 <tr>
-<td>18.852</td>
+<td>19.129</td>
 <td>0.960</td>
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>driver/n955_s10/I1</td>
+<td>driver/n955_s11/I3</td>
 </tr>
 <tr>
-<td>19.951</td>
-<td>1.099</td>
+<td>19.755</td>
+<td>0.626</td>
 <td>tINS</td>
 <td>FF</td>
-<td>5</td>
-<td>driver/n955_s10/F</td>
+<td>8</td>
+<td>driver/n955_s11/F</td>
 </tr>
 <tr>
-<td>20.911</td>
+<td>20.715</td>
 <td>0.960</td>
 <td>tNET</td>
 <td>FF</td>
@@ -934,7 +1383,7 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <td>driver/n959_s9/I1</td>
 </tr>
 <tr>
-<td>22.010</td>
+<td>21.814</td>
 <td>1.099</td>
 <td>tINS</td>
 <td>FF</td>
@@ -942,7 +1391,7 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <td>driver/n959_s9/F</td>
 </tr>
 <tr>
-<td>22.970</td>
+<td>22.774</td>
 <td>0.960</td>
 <td>tNET</td>
 <td>FF</td>
@@ -981,7 +1430,7 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <td>0.000</td>
 <td>tINS</td>
 <td>RR</td>
-<td>144</td>
+<td>143</td>
 <td>clk_ibuf/O</td>
 </tr>
 <tr>
@@ -1026,495 +1475,7 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <tr>
 <td class="label">Arrival Clock Path Delay:</td><td> cell: 0.000, 100.000%; route: 0.000, 0.000%</td></tr>
 <tr>
-<td class="label">Arrival Data Path Delay:</td><td> cell: 6.250, 48.188%; route: 5.760, 44.410%; tC2Q: 0.960, 7.402%</td></tr>
-<tr>
-<td class="label">Required Clock Path Delay:</td><td> cell: 0.000, 100.000%; route: 0.000, 0.000%</td></tr>
-</table>
-<br/>
-<h3>Path&nbsp4</h3>
-<b>Path Summary:</b></br>
-<table class="summary_table">
-<tr>
-<td class="label">Slack</td>
-<td>-2.674</td>
-</tr>
-<tr>
-<td class="label">Data Arrival Time</td>
-<td>22.970</td>
-</tr>
-<tr>
-<td class="label">Data Required Time</td>
-<td>20.296</td>
-</tr>
-<tr>
-<td class="label">From</td>
-<td>driver/n955_s41</td>
-</tr>
-<tr>
-<td class="label">To</td>
-<td>driver/dataToSend_4_s1</td>
-</tr>
-<tr>
-<td class="label">Launch Clk</td>
-<td>pattern_generator/frameNumbers[0][R]</td>
-</tr>
-<tr>
-<td class="label">Latch Clk</td>
-<td>clk[F]</td>
-</tr>
-</table>
-<b>Data Arrival Path:</b>
-<table class="summary_table">
-<tr>
-<th>AT</th>
-<th>DELAY</th>
-<th>TYPE</th>
-<th>RF</th>
-<th>FANOUT</th>
-<th>NODE</th>
-</tr>
-<tr>
-<td>10.000</td>
-<td>0.000</td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td>pattern_generator/frameNumbers[0]</td>
-</tr>
-<tr>
-<td>10.000</td>
-<td>0.000</td>
-<td>tCL</td>
-<td>FF</td>
-<td>18</td>
-<td>driver/frameNumber_0_s1/Q</td>
-</tr>
-<tr>
-<td>10.960</td>
-<td>0.960</td>
-<td>tNET</td>
-<td>FF</td>
-<td>1</td>
-<td>driver/n955_s41/I2</td>
-</tr>
-<tr>
-<td>11.782</td>
-<td>0.822</td>
-<td>tINS</td>
-<td>FF</td>
-<td>3</td>
-<td>driver/n955_s41/F</td>
-</tr>
-<tr>
-<td>12.742</td>
-<td>0.960</td>
-<td>tNET</td>
-<td>FF</td>
-<td>1</td>
-<td>driver/n955_s35/I1</td>
-</tr>
-<tr>
-<td>13.841</td>
-<td>1.099</td>
-<td>tINS</td>
-<td>FF</td>
-<td>2</td>
-<td>driver/n955_s35/F</td>
-</tr>
-<tr>
-<td>14.801</td>
-<td>0.960</td>
-<td>tNET</td>
-<td>FF</td>
-<td>1</td>
-<td>driver/n955_s26/I1</td>
-</tr>
-<tr>
-<td>15.900</td>
-<td>1.099</td>
-<td>tINS</td>
-<td>FF</td>
-<td>1</td>
-<td>driver/n955_s26/F</td>
-</tr>
-<tr>
-<td>16.860</td>
-<td>0.960</td>
-<td>tNET</td>
-<td>FF</td>
-<td>1</td>
-<td>driver/n955_s15/I0</td>
-</tr>
-<tr>
-<td>17.892</td>
-<td>1.032</td>
-<td>tINS</td>
-<td>FF</td>
-<td>3</td>
-<td>driver/n955_s15/F</td>
-</tr>
-<tr>
-<td>18.852</td>
-<td>0.960</td>
-<td>tNET</td>
-<td>FF</td>
-<td>1</td>
-<td>driver/n957_s11/I1</td>
-</tr>
-<tr>
-<td>19.951</td>
-<td>1.099</td>
-<td>tINS</td>
-<td>FF</td>
-<td>2</td>
-<td>driver/n957_s11/F</td>
-</tr>
-<tr>
-<td>20.911</td>
-<td>0.960</td>
-<td>tNET</td>
-<td>FF</td>
-<td>1</td>
-<td>driver/n958_s9/I1</td>
-</tr>
-<tr>
-<td>22.010</td>
-<td>1.099</td>
-<td>tINS</td>
-<td>FF</td>
-<td>1</td>
-<td>driver/n958_s9/F</td>
-</tr>
-<tr>
-<td>22.970</td>
-<td>0.960</td>
-<td>tNET</td>
-<td>FF</td>
-<td>1</td>
-<td>driver/dataToSend_4_s1/D</td>
-</tr>
-</table>
-<b>Data Required Path:</b>
-<table class="summary_table">
-<tr>
-<th>AT</th>
-<th>DELAY</th>
-<th>TYPE</th>
-<th>RF</th>
-<th>FANOUT</th>
-<th>NODE</th>
-</tr>
-<tr>
-<td>20.000</td>
-<td>0.000</td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td>clk</td>
-</tr>
-<tr>
-<td>20.000</td>
-<td>0.000</td>
-<td>tCL</td>
-<td>RR</td>
-<td>1</td>
-<td>clk_ibuf/I</td>
-</tr>
-<tr>
-<td>20.000</td>
-<td>0.000</td>
-<td>tINS</td>
-<td>RR</td>
-<td>144</td>
-<td>clk_ibuf/O</td>
-</tr>
-<tr>
-<td>20.726</td>
-<td>0.726</td>
-<td>tNET</td>
-<td>RR</td>
-<td>1</td>
-<td>driver/dataToSend_4_s1/CLK</td>
-</tr>
-<tr>
-<td>20.696</td>
-<td>-0.030</td>
-<td>tUnc</td>
-<td> </td>
-<td> </td>
-<td>driver/dataToSend_4_s1</td>
-</tr>
-<tr>
-<td>20.296</td>
-<td>-0.400</td>
-<td>tSu</td>
-<td> </td>
-<td>1</td>
-<td>driver/dataToSend_4_s1</td>
-</tr>
-</table>
-<b>Path Statistics:</b>
-<table class="summary_table">
-<tr>
-<td class="label">Clock Skew:</td>
-<td>0.726</td>
-</tr>
-<tr>
-<td class="label">Setup Relationship:</td>
-<td>10.000</td>
-</tr>
-<tr>
-<td class="label">Logic Level:</td>
-<td>7</td>
-</tr>
-<tr>
-<td class="label">Arrival Clock Path Delay:</td><td> cell: 0.000, 100.000%; route: 0.000, 0.000%</td></tr>
-<tr>
-<td class="label">Arrival Data Path Delay:</td><td> cell: 6.250, 48.188%; route: 5.760, 44.410%; tC2Q: 0.960, 7.402%</td></tr>
-<tr>
-<td class="label">Required Clock Path Delay:</td><td> cell: 0.000, 100.000%; route: 0.000, 0.000%</td></tr>
-</table>
-<br/>
-<h3>Path&nbsp5</h3>
-<b>Path Summary:</b></br>
-<table class="summary_table">
-<tr>
-<td class="label">Slack</td>
-<td>-2.674</td>
-</tr>
-<tr>
-<td class="label">Data Arrival Time</td>
-<td>22.970</td>
-</tr>
-<tr>
-<td class="label">Data Required Time</td>
-<td>20.296</td>
-</tr>
-<tr>
-<td class="label">From</td>
-<td>driver/n955_s41</td>
-</tr>
-<tr>
-<td class="label">To</td>
-<td>driver/dataToSend_5_s1</td>
-</tr>
-<tr>
-<td class="label">Launch Clk</td>
-<td>pattern_generator/frameNumbers[0][R]</td>
-</tr>
-<tr>
-<td class="label">Latch Clk</td>
-<td>clk[F]</td>
-</tr>
-</table>
-<b>Data Arrival Path:</b>
-<table class="summary_table">
-<tr>
-<th>AT</th>
-<th>DELAY</th>
-<th>TYPE</th>
-<th>RF</th>
-<th>FANOUT</th>
-<th>NODE</th>
-</tr>
-<tr>
-<td>10.000</td>
-<td>0.000</td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td>pattern_generator/frameNumbers[0]</td>
-</tr>
-<tr>
-<td>10.000</td>
-<td>0.000</td>
-<td>tCL</td>
-<td>FF</td>
-<td>18</td>
-<td>driver/frameNumber_0_s1/Q</td>
-</tr>
-<tr>
-<td>10.960</td>
-<td>0.960</td>
-<td>tNET</td>
-<td>FF</td>
-<td>1</td>
-<td>driver/n955_s41/I2</td>
-</tr>
-<tr>
-<td>11.782</td>
-<td>0.822</td>
-<td>tINS</td>
-<td>FF</td>
-<td>3</td>
-<td>driver/n955_s41/F</td>
-</tr>
-<tr>
-<td>12.742</td>
-<td>0.960</td>
-<td>tNET</td>
-<td>FF</td>
-<td>1</td>
-<td>driver/n955_s35/I1</td>
-</tr>
-<tr>
-<td>13.841</td>
-<td>1.099</td>
-<td>tINS</td>
-<td>FF</td>
-<td>2</td>
-<td>driver/n955_s35/F</td>
-</tr>
-<tr>
-<td>14.801</td>
-<td>0.960</td>
-<td>tNET</td>
-<td>FF</td>
-<td>1</td>
-<td>driver/n955_s26/I1</td>
-</tr>
-<tr>
-<td>15.900</td>
-<td>1.099</td>
-<td>tINS</td>
-<td>FF</td>
-<td>1</td>
-<td>driver/n955_s26/F</td>
-</tr>
-<tr>
-<td>16.860</td>
-<td>0.960</td>
-<td>tNET</td>
-<td>FF</td>
-<td>1</td>
-<td>driver/n955_s15/I0</td>
-</tr>
-<tr>
-<td>17.892</td>
-<td>1.032</td>
-<td>tINS</td>
-<td>FF</td>
-<td>3</td>
-<td>driver/n955_s15/F</td>
-</tr>
-<tr>
-<td>18.852</td>
-<td>0.960</td>
-<td>tNET</td>
-<td>FF</td>
-<td>1</td>
-<td>driver/n957_s11/I1</td>
-</tr>
-<tr>
-<td>19.951</td>
-<td>1.099</td>
-<td>tINS</td>
-<td>FF</td>
-<td>2</td>
-<td>driver/n957_s11/F</td>
-</tr>
-<tr>
-<td>20.911</td>
-<td>0.960</td>
-<td>tNET</td>
-<td>FF</td>
-<td>1</td>
-<td>driver/n957_s9/I1</td>
-</tr>
-<tr>
-<td>22.010</td>
-<td>1.099</td>
-<td>tINS</td>
-<td>FF</td>
-<td>1</td>
-<td>driver/n957_s9/F</td>
-</tr>
-<tr>
-<td>22.970</td>
-<td>0.960</td>
-<td>tNET</td>
-<td>FF</td>
-<td>1</td>
-<td>driver/dataToSend_5_s1/D</td>
-</tr>
-</table>
-<b>Data Required Path:</b>
-<table class="summary_table">
-<tr>
-<th>AT</th>
-<th>DELAY</th>
-<th>TYPE</th>
-<th>RF</th>
-<th>FANOUT</th>
-<th>NODE</th>
-</tr>
-<tr>
-<td>20.000</td>
-<td>0.000</td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td>clk</td>
-</tr>
-<tr>
-<td>20.000</td>
-<td>0.000</td>
-<td>tCL</td>
-<td>RR</td>
-<td>1</td>
-<td>clk_ibuf/I</td>
-</tr>
-<tr>
-<td>20.000</td>
-<td>0.000</td>
-<td>tINS</td>
-<td>RR</td>
-<td>144</td>
-<td>clk_ibuf/O</td>
-</tr>
-<tr>
-<td>20.726</td>
-<td>0.726</td>
-<td>tNET</td>
-<td>RR</td>
-<td>1</td>
-<td>driver/dataToSend_5_s1/CLK</td>
-</tr>
-<tr>
-<td>20.696</td>
-<td>-0.030</td>
-<td>tUnc</td>
-<td> </td>
-<td> </td>
-<td>driver/dataToSend_5_s1</td>
-</tr>
-<tr>
-<td>20.296</td>
-<td>-0.400</td>
-<td>tSu</td>
-<td> </td>
-<td>1</td>
-<td>driver/dataToSend_5_s1</td>
-</tr>
-</table>
-<b>Path Statistics:</b>
-<table class="summary_table">
-<tr>
-<td class="label">Clock Skew:</td>
-<td>0.726</td>
-</tr>
-<tr>
-<td class="label">Setup Relationship:</td>
-<td>10.000</td>
-</tr>
-<tr>
-<td class="label">Logic Level:</td>
-<td>7</td>
-</tr>
-<tr>
-<td class="label">Arrival Clock Path Delay:</td><td> cell: 0.000, 100.000%; route: 0.000, 0.000%</td></tr>
-<tr>
-<td class="label">Arrival Data Path Delay:</td><td> cell: 6.250, 48.188%; route: 5.760, 44.410%; tC2Q: 0.960, 7.402%</td></tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 6.054, 47.393%; route: 5.760, 45.092%; tC2Q: 0.960, 7.515%</td></tr>
 <tr>
 <td class="label">Required Clock Path Delay:</td><td> cell: 0.000, 100.000%; route: 0.000, 0.000%</td></tr>
 </table>

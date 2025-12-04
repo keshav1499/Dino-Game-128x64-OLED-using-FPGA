@@ -25,8 +25,8 @@ module pattern_generator (
   initial $readmemh("startgame.hex", startGame);
 
   //ABCDEF Image to be replaced with characters on th
-  reg [8:0] abcdef [0:34];
-  initial $readmemh("ABCDEF.hex", abcdef);
+  reg [8:0] score [0:34];
+  initial $readmemh("SCORE.hex", score);
 
   parameter OBSTACLE_WARMUP = 32'd27_000_000; // 27mhz 1 sec
   reg [31:0] warmupCounter = 0; //make it count upto 1 second
@@ -37,7 +37,7 @@ module pattern_generator (
   localparam OBS_WIDTH      = 8;
   localparam SCREEN_WIDTH   = 128;
   localparam SCORE_ROW      = 0;
-  localparam SCORE_COL      = 70;
+  localparam SCORE_COL      = 80;
 
   // --- Obstacle Position & Collision Logic (Active in PLAY state) ---
   // Compute obstacle position based on frame number
@@ -146,8 +146,8 @@ module pattern_generator (
           patternByte = catSprite[(row - (jumpOffset ? 1 : 4)) * 16 + (col - CAT_X)];
         end
         // SCORE RENDERING
-        else if (row == SCORE_ROW && (col >= SCORE_COL && col < SCREEN_WIDTH)) begin
-         patternByte = abcdef[(row - SCORE_ROW * 16 + col - SCORE_COL)];
+        else if (row == SCORE_ROW && (col >= SCORE_COL && col < SCORE_COL + 35)) begin
+         patternByte = score[(row - SCORE_ROW * 16 + col - SCORE_COL)];
         end
         // Obstacle rendering
         else if (row == 5 && (col >= obsX && col < obsXEnd)) begin

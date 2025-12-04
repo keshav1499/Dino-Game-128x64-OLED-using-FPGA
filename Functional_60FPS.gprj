@@ -7,12 +7,14 @@
     <FileList>
         <File path="src/jump_controller.v" type="file.verilog" enable="1"/>
         <File path="src/pattern_generator.v" type="file.verilog" enable="1"/>
+        <File path="src/score_logic.v" type="file.verilog" enable="1"/>
         <File path="src/screen_driver.v" type="file.verilog" enable="1"/>
         <File path="src/top.v" type="file.verilog" enable="1"/>
         <File path="src/Functional_60FPS.cst" type="file.cst" enable="1"/>
-        <File path="src/ABCDEF.hex" type="file.other" enable="1"/>
-        <File path="src/cat_sprite.hex" type="file.other" enable="1"/>
-        <File path="src/gameover.hex" type="file.other" enable="1"/>
-        <File path="src/startgame.hex" type="file.other" enable="1"/>
+        <File path="src/hex_pngs/SCORE.hex" type="file.other" enable="1"/>
+        <File path="src/hex_pngs/cat_sprite.hex" type="file.other" enable="1"/>
+        <File path="src/hex_pngs/gameover.hex" type="file.other" enable="1"/>
+        <File path="src/hex_pngs/nums.hex" type="file.other" enable="1"/>
+        <File path="src/hex_pngs/startgame.hex" type="file.other" enable="1"/>
     </FileList>
 </Project>
