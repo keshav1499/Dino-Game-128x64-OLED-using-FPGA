@@ -7,32 +7,32 @@
   <Report Title>: PnR Report
   <Design File>: /home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/impl/gwsynthesis/Functional_60FPS.vg
   <Physical Constraints File>: /home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/Functional_60FPS.cst
-  <Timing Constraints File>: ---
+  <Timing Constraints File>: /home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/Functional_60FPS.sdc
   <Tool Version>: V1.9.11.03 Education
   <Part Number>: GW1NR-LV9QN88PC6/I5
   <Device>: GW1NR-9
   <Device Version>: C
-  <Created Time>:Thu Dec  4 07:20:48 2025
+  <Created Time>:Thu Dec  4 17:59:01 2025
 
 
 2. PnR Details
 
   Running placement:
-    Placement Phase 0: CPU time = 0h 0m 0.007s, Elapsed time = 0h 0m 0.006s
-    Placement Phase 1: CPU time = 0h 0m 0.045s, Elapsed time = 0h 0m 0.044s
-    Placement Phase 2: CPU time = 0h 0m 0.012s, Elapsed time = 0h 0m 0.011s
-    Placement Phase 3: CPU time = 0h 0m 0.35s, Elapsed time = 0h 0m 0.345s
-    Total Placement: CPU time = 0h 0m 0.414s, Elapsed time = 0h 0m 0.406s
+    Placement Phase 0: CPU time = 0h 0m 0.043s, Elapsed time = 0h 0m 0.043s
+    Placement Phase 1: CPU time = 0h 0m 0.049s, Elapsed time = 0h 0m 0.048s
+    Placement Phase 2: CPU time = 0h 0m 0.044s, Elapsed time = 0h 0m 0.043s
+    Placement Phase 3: CPU time = 0h 0m 4s, Elapsed time = 0h 0m 4s
+    Total Placement: CPU time = 0h 0m 4s, Elapsed time = 0h 0m 4s
  Running routing:
     Routing Phase 0: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s
-    Routing Phase 1: CPU time = 0h 0m 0.069s, Elapsed time = 0h 0m 0.069s
-    Routing Phase 2: CPU time = 0h 0m 0.155s, Elapsed time = 0h 0m 0.153s
+    Routing Phase 1: CPU time = 0h 0m 0.098s, Elapsed time = 0h 0m 0.098s
+    Routing Phase 2: CPU time = 0h 0m 2s, Elapsed time = 0h 0m 2s
     Routing Phase 3: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s
-    Total Routing: CPU time = 0h 0m 0.224s, Elapsed time = 0h 0m 0.222s
+    Total Routing: CPU time = 0h 0m 2s, Elapsed time = 0h 0m 2s
  Generate output files:
-    CPU time = 0h 0m 0.473s, Elapsed time = 0h 0m 0.44s
+    CPU time = 0h 0m 0.527s, Elapsed time = 0h 0m 0.524s
 
- Total Time and Memory Usage: CPU time = 0h 0m 1s, Elapsed time = 0h 0m 1s, Peak memory usage = 577MB
+ Total Time and Memory Usage: CPU time = 0h 0m 7s, Elapsed time = 0h 0m 7s, Peak memory usage = 665MB
 
 
 3. Resource Usage Summary
@@ -40,20 +40,22 @@
   --------------------------------------------------------------------------------
   Resources                   | Usage                               | Utilization
   --------------------------------------------------------------------------------
-  Logic                       | 288/8640                            |  4%
-    --LUT,ALU,ROM16           | 288(174 LUT, 114 ALU, 0 ROM16)      | -
+  Logic                       | 887/8640                            |  11%
+    --LUT,ALU,ROM16           | 887(737 LUT, 150 ALU, 0 ROM16)      | -
     --SSRAM(RAM16)            | 0                                   | -
-  Register                    | 154/6693                            |  3%
+  Register                    | 200/6693                            |  3%
     --Logic Register as Latch | 0/6480                              |  0%
-    --Logic Register as FF    | 151/6480                            |  3%
+    --Logic Register as FF    | 197/6480                            |  4%
     --I/O Register as Latch   | 0/213                               |  0%
     --I/O Register as FF      | 3/213                               |  2%
-  CLS                         | 165/4320                            |  4%
+  CLS                         | 506/4320                            |  12%
   I/O Port                    | 7/71                                |  10%
   I/O Buf                     | 7                                   | -
     --Input Buf               | 2                                   | -
     --Output Buf              | 5                                   | -
     --Inout Buf               | 0                                   | -
+  BSRAM                       | 2/26                                | 8%
+    --pROM                    | 2
   ================================================================================
 
 
@@ -74,7 +76,7 @@
   ------------------------------------------
   Clock Resource| Usage         | Utilization 
   ------------------------------------------
-  PRIMARY       | 2/8           | 25%
+  PRIMARY       | 3/8           | 38%
   LW            | 0/8           | 0%
   GCLK_PIN      | 1/3           | 34%
   ==========================================
@@ -85,8 +87,9 @@
   -------------------------------------------
   Signal         | Global Clock   | Location
   -------------------------------------------
-  clk_d          | PRIMARY        |  BR BL
-  frameNumbers[0]| PRIMARY        |  BL
+  clk_d          | PRIMARY        |  TR TL BR BL
+  score_tick     | PRIMARY        |  BL
+  frameNumbers[0]| PRIMARY        |  BR BL
   ===========================================
 
 

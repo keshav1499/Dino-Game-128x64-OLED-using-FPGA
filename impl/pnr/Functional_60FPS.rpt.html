@@ -63,7 +63,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">Timing Constraints File</td>
-<td>---</td>
+<td>/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/Functional_60FPS.sdc</td>
 </tr>
 <tr>
 <td class="label">Tool Version</td>
@@ -83,7 +83,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">Created Time</td>
-<td>Thu Dec  4 07:20:48 2025
+<td>Thu Dec  4 17:59:01 2025
 </td>
 </tr>
 <tr>
@@ -97,24 +97,24 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <tr>
 <td class="label">Place & Route Process</td>
 <td>Running placement:
-   Placement Phase 0: CPU time = 0h 0m 0.007s, Elapsed time = 0h 0m 0.006s
-   Placement Phase 1: CPU time = 0h 0m 0.045s, Elapsed time = 0h 0m 0.044s
-   Placement Phase 2: CPU time = 0h 0m 0.012s, Elapsed time = 0h 0m 0.011s
-   Placement Phase 3: CPU time = 0h 0m 0.35s, Elapsed time = 0h 0m 0.345s
-   Total Placement: CPU time = 0h 0m 0.414s, Elapsed time = 0h 0m 0.406s
+   Placement Phase 0: CPU time = 0h 0m 0.043s, Elapsed time = 0h 0m 0.043s
+   Placement Phase 1: CPU time = 0h 0m 0.049s, Elapsed time = 0h 0m 0.048s
+   Placement Phase 2: CPU time = 0h 0m 0.044s, Elapsed time = 0h 0m 0.043s
+   Placement Phase 3: CPU time = 0h 0m 4s, Elapsed time = 0h 0m 4s
+   Total Placement: CPU time = 0h 0m 4s, Elapsed time = 0h 0m 4s
 Running routing:
    Routing Phase 0: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s
-   Routing Phase 1: CPU time = 0h 0m 0.069s, Elapsed time = 0h 0m 0.069s
-   Routing Phase 2: CPU time = 0h 0m 0.155s, Elapsed time = 0h 0m 0.153s
+   Routing Phase 1: CPU time = 0h 0m 0.098s, Elapsed time = 0h 0m 0.098s
+   Routing Phase 2: CPU time = 0h 0m 2s, Elapsed time = 0h 0m 2s
    Routing Phase 3: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s
-   Total Routing: CPU time = 0h 0m 0.224s, Elapsed time = 0h 0m 0.222s
+   Total Routing: CPU time = 0h 0m 2s, Elapsed time = 0h 0m 2s
 Generate output files:
-   CPU time = 0h 0m 0.473s, Elapsed time = 0h 0m 0.44s
+   CPU time = 0h 0m 0.527s, Elapsed time = 0h 0m 0.524s
 </td>
 </tr>
 <tr>
 <td class="label">Total Time and Memory Usage</td>
-<td>CPU time = 0h 0m 1s, Elapsed time = 0h 0m 1s, Peak memory usage = 577MB</td>
+<td>CPU time = 0h 0m 7s, Elapsed time = 0h 0m 7s, Peak memory usage = 665MB</td>
 </tr>
 </table>
 <br/>
@@ -129,12 +129,12 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">Logic</td>
-<td>288/8640</td>
-<td>4%</td>
+<td>887/8640</td>
+<td>11%</td>
 </tr>
 <tr>
 <td class="label">&nbsp &nbsp --LUT,ALU,ROM16</td>
-<td>288(174 LUT, 114 ALU, 0 ROM16)</td>
+<td>887(737 LUT, 150 ALU, 0 ROM16)</td>
 <td>-</td>
 </tr>
 <tr>
@@ -144,7 +144,7 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">Register</td>
-<td>154/6693</td>
+<td>200/6693</td>
 <td>3%</td>
 </tr>
 <tr>
@@ -154,8 +154,8 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">&nbsp &nbsp --Logic Register as FF</td>
-<td>151/6480</td>
-<td>3%</td>
+<td>197/6480</td>
+<td>4%</td>
 </tr>
 <tr>
 <td class="label">&nbsp &nbsp --I/O Register as Latch</td>
@@ -169,8 +169,8 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">CLS</td>
-<td>165/4320</td>
-<td>4%</td>
+<td>506/4320</td>
+<td>12%</td>
 </tr>
 <tr>
 <td class="label">I/O Port</td>
@@ -196,6 +196,11 @@ Generate output files:
 <td class="label"> &nbsp &nbsp --Inout Buf</td>
 <td>0</td>
 <td>-</td>
+</tr>
+<tr>
+<td class="label">BSRAM</td>
+<td>2 pROM<br/></td>
+<td>8%</td>
 </tr>
 </table>
 <h2><a name="I/O_Bank_Usage_Summary">I/O Bank Usage Summary:</a></h2>
@@ -227,8 +232,8 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">PRIMARY</td>
-<td>2/8</td>
-<td>25%</td>
+<td>3/8</td>
+<td>38%</td>
 </tr>
 <tr>
 <td class="label">LW</td>
@@ -252,12 +257,17 @@ Generate output files:
 <tr>
 <td class="label">clk_d</td>
 <td>PRIMARY</td>
-<td> BR BL</td>
+<td> TR TL BR BL</td>
+</tr>
+<tr>
+<td class="label">score_tick</td>
+<td>PRIMARY</td>
+<td> BL</td>
 </tr>
 <tr>
 <td class="label">frameNumbers[0]</td>
 <td>PRIMARY</td>
-<td> BL</td>
+<td> BR BL</td>
 </tr>
 </table>
 <br/>

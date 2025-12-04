@@ -3,6 +3,7 @@
 -pn GW1NR-LV9QN88PC6/I5
 -cst /home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/Functional_60FPS.cst
 -cfg /home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/impl/pnr/device.cfg
+-sdc /home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/Functional_60FPS.sdc
 -bit
 -tr
 -ph

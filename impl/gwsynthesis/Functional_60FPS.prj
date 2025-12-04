@@ -6,9 +6,9 @@
     <FileList>
         <File path="/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/jump_controller.v" type="verilog"/>
         <File path="/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/pattern_generator.v" type="verilog"/>
+        <File path="/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/score_logic.v" type="verilog"/>
         <File path="/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/screen_driver.v" type="verilog"/>
         <File path="/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/top.v" type="verilog"/>
-        <File path="/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/score_logic.v" type="verilog"/>
     </FileList>
     <OptionList>
         <Option type="disable_insert_pad" value="0"/>

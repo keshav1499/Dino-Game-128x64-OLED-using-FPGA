@@ -3,48 +3,56 @@ module pattern_generator (
   input wire [7:0] frameNumber,   // Current frame count from screen_driver
   input wire       jumpOffset,    // From jump_controller: 0 = ground, 1 = jump
   output reg [7:0] patternByte,   // Output pattern byte for current pixel
-  input            button         // Active-low button for state transitions
+  output wire      gameon,        // Wire that tells if STATE_PLAY is the active state
+  input            button,        // Active-low button for state transitions
+  input            score_tick,    // Clock/tick for score increment (e.g., 9Hz)
+  input            CLK_27MHZ      // Main system clock (now unused, but kept as a port)
 );
 
   // --- Display Dimensions & Addressing ---
-  // Calculate column and row from pixelIndex (128x8 display; 128x64 pixels -> 8 pages)
+  // Calculates column (0-127) and row (0-7) for the current pixel
   wire [6:0] col = pixelIndex % 128;
   wire [2:0] row = pixelIndex / 128;
 
-  // --- Sprite & Image Memory ---
-  // Cat sprite memory: 2 rows of 16 bytes (16x2 = 32 total bytes)
+  // --- Sprite & Image Memory Initialization ---
   reg [7:0] catSprite [0:31];
-  initial $readmemh("cat_sprite.hex", catSprite);
-
-  // Game Over full-screen image (128x64 -> 1024 bytes)
+  initial $readmemh("hex_pngs/cat_sprite.hex", catSprite);
   reg [7:0] gameOver [0:1023];
-  initial $readmemh("gameover.hex", gameOver);
-
-  // Game Start Full screen image
+  initial $readmemh("hex_pngs/gameover.hex", gameOver);
   reg [7:0] startGame [0:1023];
-  initial $readmemh("startgame.hex", startGame);
-
-  //ABCDEF Image to be replaced with characters on th
-  reg [8:0] score [0:34];
-  initial $readmemh("SCORE.hex", score);
-
-  parameter OBSTACLE_WARMUP = 32'd27_000_000; // 27mhz 1 sec
-  reg [31:0] warmupCounter = 0; //make it count upto 1 second
+  initial $readmemh("hex_pngs/startgame.hex", startGame);
+  reg [8:0] score_display [0:34];
+  initial $readmemh("hex_pngs/SCORE.hex", score_display);
+  reg [8:0] numerics [0:79];
+  initial $readmemh("hex_pngs/nums.hex", numerics);
 
   // --- Game Constants ---
-  localparam CAT_X          = 40;
-  localparam CAT_WIDTH      = 16;
-  localparam OBS_WIDTH      = 8;
-  localparam SCREEN_WIDTH   = 128;
-  localparam SCORE_ROW      = 0;
-  localparam SCORE_COL      = 80;
+  localparam CAT_X           = 40;
+  localparam CAT_WIDTH       = 16;
+  localparam OBS_WIDTH       = 8;
+  localparam SCREEN_WIDTH    = 128;
+  localparam SCORE_ROW       = 0;
+  localparam CHAR_WIDTH      = 8;
+  localparam SCORE_LABEL_WIDTH = 34; 
+  localparam SCORE_COL       = 49; 
+  localparam SCORE_DIGIT_GAP = 2;
 
-  // --- Obstacle Position & Collision Logic (Active in PLAY state) ---
-  // Compute obstacle position based on frame number
+  // --- Score Positioning ---
+  localparam DIGIT_1_COL = SCORE_COL + SCORE_LABEL_WIDTH + SCORE_DIGIT_GAP; 
+  localparam DIGIT_2_COL = DIGIT_1_COL + CHAR_WIDTH;      
+  localparam DIGIT_3_COL = DIGIT_2_COL + CHAR_WIDTH;      
+  localparam DIGIT_4_COL = DIGIT_3_COL + CHAR_WIDTH;      
+
+  // --- Score Registers and Decomposition (Max score 9999) ---
+  reg [13:0] score = 0;
+  wire [3:0] score_thousands = score / 1000;
+  wire [3:0] score_hundreds = (score % 1000) / 100;
+  wire [3:0] score_tens     = (score % 100) / 10;
+  wire [3:0] score_ones     = score % 10;
+
+  // --- Obstacle Position & Collision Logic ---
   wire [6:0] obsX     = SCREEN_WIDTH - ((frameNumber * 1) % (SCREEN_WIDTH + OBS_WIDTH));
   wire [6:0] obsXEnd  = obsX + OBS_WIDTH;
-
-  // Check for potential collision
   wire horizontalOverlap = (obsX < (CAT_X + CAT_WIDTH)) && (obsXEnd > CAT_X);
   wire catOnGround       = !jumpOffset;
   wire collisionDetected = horizontalOverlap && catOnGround;
@@ -53,116 +61,143 @@ module pattern_generator (
   localparam [1:0] STATE_START_GAME = 2'b00;
   localparam [1:0] STATE_PLAY       = 2'b01;
   localparam [1:0] STATE_GAME_OVER  = 2'b10;
-
   reg [1:0] currentState, nextState;
-
+  
+  // --- Output assignment and Game Status ---
+  assign gameon = (currentState == STATE_PLAY);
 
   // --- Edge Detection Logic for Debouncing ---
-
-  // Register to hold the button state from the previous frame
   reg prevButton = 1'b1;
-
-  // Detect a transition from high (released) to low (pressed)
   wire button_press_edge = (prevButton == 1'b1) && (button == 1'b0);
-
-  // --- FSM State Register Update (Sequential Logic) ---
-  // The state only changes on the rising edge of a new frame
-  // The LSB of frameNumber (frameNumber[0]) toggles every frame, which is used as a clock edge.
+  
+  // --- Score Rendering Offsets (Combinational Wires) ---
+  wire [4:0] label_col_offset = col - SCORE_COL; 
+  wire [2:0] char_col_offset_1 = col - DIGIT_1_COL; 
+  wire [2:0] char_col_offset_2 = col - DIGIT_2_COL; 
+  wire [2:0] char_col_offset_3 = col - DIGIT_3_COL; 
+  wire [2:0] char_col_offset_4 = col - DIGIT_4_COL; 
+  
+  // --- Sequential Logic Block 1: Score Update (Clocked by score_tick) ---
+  always @(posedge score_tick) begin
+    if (gameon) begin
+      // Increment score only during STATE_PLAY
+      score <= score + 1 + score/100;
+    end else if (currentState == STATE_START_GAME) begin
+            score <= 0;
+        end
+  end
+  
+  // --- Sequential Logic Block 2: FSM State and Debounce (Clocked by frameNumber[0]) ---
   reg [7:0] prevFrame = 0;
-  wire newFrame = (frameNumber != prevFrame); // Detect a new frame
+  wire newFrame = (frameNumber != prevFrame); 
 
   always @(posedge frameNumber[0]) begin
-    if (newFrame) begin
+    if (newFrame) begin : fsm_update_block // Use a named block or just begin/end
       currentState <= nextState;
       prevFrame <= frameNumber;
-
-      // Update previous button state on a new frame
-      prevButton <= button;
-    end
+      prevButton <= button; // Debouncing register update
+    end // FIX: Changed '}' to 'end'
   end
 
-  // --- FSM Next State Logic (Combinational Logic) ---
-  // Determine the next state based on the current state, collision, and button input.
-  // The button is active-low (pressed when button == 0).
+  // --- Combinational Logic Block 1: Next State Transitions ---
   always @(*) begin
-    nextState = currentState; // Default is to stay in the current state
+    nextState = currentState; 
 
     case (currentState)
       STATE_START_GAME: begin
-        // Go to PLAY state when the button is pressed (active-low)
+        // Start game on button press edge
         if (button_press_edge) begin
           nextState = STATE_PLAY;
         end
       end
 
-
-
       STATE_PLAY: begin
-        // Go to GAME_OVER state upon collision
+        // Go to GAME_OVER immediately upon collision
         if (collisionDetected) begin
           nextState = STATE_GAME_OVER;
         end
-        // Note: No transition from PLAY based on the button here.
       end
-
-
 
       STATE_GAME_OVER: begin
-        // Go to START_GAME state when the button is pressed (active-low)
+        // Return to start screen on button press edge
         if (button_press_edge) begin
           nextState = STATE_START_GAME;
-        end
+        end // FIX: Changed '}' to 'end'
       end
+      
+      default: nextState = STATE_START_GAME; 
     endcase
-  end
+  end // FIX: Added missing 'end' for the always block
 
-  // --- Pattern Generation / Rendering Logic (Combinational Logic) ---
-  // The pixel output depends on the current FSM state.
+  // --- Combinational Logic Block 2: Pattern Generation / Rendering ---
   always @(*) begin
+    patternByte = 8'h00; // Default: Background
+
     case (currentState)
       STATE_START_GAME: begin
-        // Display the START GAME image
+        // Display start screen image
         patternByte = startGame[pixelIndex];
       end
 
-
-
       STATE_GAME_OVER: begin
-        // Display the GAME OVER image
+        // Display game over image
         patternByte = gameOver[pixelIndex];
       end
 
-
-
       STATE_PLAY: begin
-        // Game Play rendering logic (original logic adapted)
+        // 1. Ground line (Row 6)
         if (row == 6) begin
-          patternByte = 8'hF0; // Ground line
+          patternByte = 8'hF0; 
         end
-        // Cat sprite rendering: The cat's vertical position depends on jumpOffset
+        
+        // 2. Score Rendering (High Priority)
+        else if (row == SCORE_ROW && (col >= SCORE_COL && col < DIGIT_4_COL + CHAR_WIDTH)) begin
+          
+          // "SCORE:" label
+          if (col < DIGIT_1_COL - SCORE_DIGIT_GAP) begin
+            patternByte = score_display[label_col_offset]; 
+          end
+          // Thousands digit (10^3)
+          else if (col >= DIGIT_1_COL && col < DIGIT_2_COL) begin
+            patternByte = numerics[(score_thousands * CHAR_WIDTH) + char_col_offset_1]; 
+          end
+          // Hundreds digit (10^2)
+          else if (col >= DIGIT_2_COL && col < DIGIT_3_COL) begin
+            patternByte = numerics[(score_hundreds * CHAR_WIDTH) + char_col_offset_2];
+          end
+          // Tens digit (10^1)
+          else if (col >= DIGIT_3_COL && col < DIGIT_4_COL) begin
+            patternByte = numerics[(score_tens * CHAR_WIDTH) + char_col_offset_3];
+          end
+          // Ones digit (10^0)
+          else if (col >= DIGIT_4_COL && col < DIGIT_4_COL + CHAR_WIDTH) begin
+            patternByte = numerics[(score_ones * CHAR_WIDTH) + char_col_offset_4];
+          end
+          else begin
+            patternByte = 8'h00; // Gap
+          end
+
+        end
+        
+        // 3. Cat sprite rendering (Jumping or Grounded position)
         else if ((row == (jumpOffset ? 1 : 4) || row == (jumpOffset ? 2 : 5)) &&
                  (col >= CAT_X && col < CAT_X + CAT_WIDTH)) begin
-          // Calculate address in the 2x16 catSprite array
+          // Calculates address based on row and column offset
           patternByte = catSprite[(row - (jumpOffset ? 1 : 4)) * 16 + (col - CAT_X)];
         end
-        // SCORE RENDERING
-        else if (row == SCORE_ROW && (col >= SCORE_COL && col < SCORE_COL + 35)) begin
-         patternByte = score[(row - SCORE_ROW * 16 + col - SCORE_COL)];
-        end
-        // Obstacle rendering
+
+        // 4. Obstacle rendering (Always active in STATE_PLAY)
         else if (row == 5 && (col >= obsX && col < obsXEnd)) begin
           patternByte = 8'hFF; // Obstacle block
         end
-        else begin
-          patternByte = 8'h00; // Background
-        end
+
+        // 5. Default background (handled by the initial assignment)
       end
 
       default: begin
-        // Should not happen, but safe to default to background
         patternByte = 8'h00;
       end
     endcase
-  end
+  end 
 
 endmodule

@@ -17,6 +17,8 @@ wire jumpOffset;
 wire [9:0] pixelIndex;
 wire [7:0] frameNumbers;
 wire [7:0] patternByte;
+wire gameon;
+wire score_tick;
 
   screen_driver #(
     .STARTUP_WAIT(STARTUP_WAIT),
@@ -49,8 +51,17 @@ jump_controller jump_inst (
     .frameNumber(frameNumbers),
     .patternByte(patternByte),
     .jumpOffset(jumpOffset),
-    .button(btn1)
+    .button(btn1),
+    .gameon(gameon),
+    .score_tick(score_tick),
+    .CLK_27MHZ(clk)
   );
+
+score_logic score_counter_only(
+  .clk(clk),
+  .gameon(gameon),
+  .score_tick(score_tick)
+);
 
 
 endmodule

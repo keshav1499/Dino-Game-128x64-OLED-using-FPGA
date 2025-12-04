@@ -11,6 +11,7 @@
         <File path="src/screen_driver.v" type="file.verilog" enable="1"/>
         <File path="src/top.v" type="file.verilog" enable="1"/>
         <File path="src/Functional_60FPS.cst" type="file.cst" enable="1"/>
+        <File path="src/Functional_60FPS.sdc" type="file.sdc" enable="1"/>
         <File path="src/hex_pngs/SCORE.hex" type="file.other" enable="1"/>
         <File path="src/hex_pngs/cat_sprite.hex" type="file.other" enable="1"/>
         <File path="src/hex_pngs/gameover.hex" type="file.other" enable="1"/>

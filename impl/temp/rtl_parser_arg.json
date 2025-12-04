@@ -10,15 +10,15 @@
    "Type" : "verilog"
   },
   {
+   "Path" : "/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/score_logic.v",
+   "Type" : "verilog"
+  },
+  {
    "Path" : "/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/screen_driver.v",
    "Type" : "verilog"
   },
   {
    "Path" : "/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/top.v",
-   "Type" : "verilog"
-  },
-  {
-   "Path" : "/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/score_logic.v",
    "Type" : "verilog"
   }
  ],

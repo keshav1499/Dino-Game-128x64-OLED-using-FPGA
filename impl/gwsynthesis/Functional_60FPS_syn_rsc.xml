@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Module name="top" T_Register="154(0)" T_Alu="108(0)" T_Lut="174(0)">
- <SubModule name="driver" Register="108" Alu="69" Lut="154" T_Register="108(108)" T_Alu="69(69)" T_Lut="154(154)"/>
- <SubModule name="jump_inst" Register="35" Alu="31" Lut="14" T_Register="35(35)" T_Alu="31(31)" T_Lut="14(14)"/>
- <SubModule name="patternGen" Register="11" Alu="8" Lut="6" T_Register="11(11)" T_Alu="8(8)" T_Lut="6(6)"/>
+<Module name="top" T_Register="200(0)" T_Alu="142(0)" T_Lut="737(0)" T_Bsram="2(0)">
+ <SubModule name="driver" Register="117" Alu="69" Lut="524" T_Register="117(117)" T_Alu="69(69)" T_Lut="524(524)"/>
+ <SubModule name="jump_inst" Register="35" Alu="31" Lut="12" T_Register="35(35)" T_Alu="31(31)" T_Lut="12(12)"/>
+ <SubModule name="patternGen" Register="26" Alu="22" Lut="192" Bsram="2" T_Register="26(26)" T_Alu="22(22)" T_Lut="192(192)" T_Bsram="2(2)"/>
+ <SubModule name="score_counter_only" Register="22" Alu="20" Lut="9" T_Register="22(22)" T_Alu="20(20)" T_Lut="9(9)"/>
 </Module>
