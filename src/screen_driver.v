@@ -6,6 +6,7 @@ module screen_driver
 (
   input clk,
   input wire [7:0] patternByte,
+  input wire gameon,
   output io_sclk,
   output io_sdin,
   output io_cs,
@@ -36,7 +37,7 @@ module screen_driver
   reg [7:0] dataToSend = 0;
   reg [3:0] bitNumber = 0;
   reg [9:0] pixelCounter = 0;
-  reg [7:0] frameNumber = 0;
+  //reg [7:0] frameNumber = 0;
 
   localparam SETUP_INSTRUCTIONS = 23;
   reg [(SETUP_INSTRUCTIONS*8)-1:0]
@@ -61,11 +62,11 @@ module screen_driver
   assign io_cs = cs;
   assign pixelIndex = pixelCounter;  //The pixelcounter variable here is too entangled, maybe run find and replace to declutter in future
 
+  //detect gameon STATE activation
+  reg prevGameOn = 1'b0;
+  wire gameOn_edge = (prevGameOn == 1'b0) && (gameon == 1'b1);
+
   // Generate 1 byte of display pattern dynamically
-
-
-
-
 
   
 always @(posedge clk) begin
@@ -132,7 +133,7 @@ end
   cs <= 1;
   if (dc == 0) begin // Command phase
     if (commandIndex == 0) begin
-      frameNumber <= frameNumber + 1;
+      frameNumber <= gameOn_edge ? 8'b0: frameNumber + 1 ;
       pixelCounter <= 0;
       state <= STATE_LOAD_DATA;
     end else begin

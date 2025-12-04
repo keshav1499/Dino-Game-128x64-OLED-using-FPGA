@@ -32,7 +32,8 @@ wire score_tick;
     .io_reset(io_reset),
     .pixelIndex(pixelIndex),
     .frameNumber(frameNumbers),
-    .patternByte(patternByte)
+    .patternByte(patternByte),
+    .gameon(gameon)
   );
 
 
@@ -41,7 +42,8 @@ wire score_tick;
 jump_controller jump_inst (
   .clk(clk),
   .btn1(btn1),
-  .jumpOffset(jumpOffset)
+  .jumpOffset(jumpOffset),
+  .gameon(gameon)
 );
 
 

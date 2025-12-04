@@ -4,18 +4,18 @@ Analyzing Verilog file '/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-
 Analyzing Verilog file '/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/pattern_generator.v'
 Analyzing Verilog file '/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/score_logic.v'
 Analyzing Verilog file '/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/screen_driver.v'
-WARN  (EX3628) : Redeclaration of ANSI port 'frameNumber' is not allowed("/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/screen_driver.v":39)
 Analyzing Verilog file '/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/top.v'
-WARN  (EX3073) : Port 'obstacle_tick' remains unconnected for this instance("/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/top.v":64)
+WARN  (EX3073) : Port 'obstacle_tick' remains unconnected for this instance("/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/top.v":66)
 Compiling module 'top'("/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/top.v":2)
 Compiling module 'screen_driver(STARTUP_WAIT=32'b00000000100110001001011010000000,FRAME_WAIT=32'b00000000000001101101110111010000)'("/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/screen_driver.v":1)
-WARN  (EX3780) : Using initial value of 'startupCommands' since it is never assigned("/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/screen_driver.v":46)
-WARN  (EX3791) : Expression size 32 truncated to fit in target size 8("/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/screen_driver.v":102)
-WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/screen_driver.v":122)
-WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/screen_driver.v":135)
-WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/screen_driver.v":142)
-WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/screen_driver.v":177)
-WARN  (EX1998) : Net 'commandIndex[2]' does not have a driver("/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/screen_driver.v":51)
+WARN  (EX3780) : Using initial value of 'startupCommands' since it is never assigned("/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/screen_driver.v":47)
+WARN  (EX3780) : Using initial value of 'prevGameOn' since it is never assigned("/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/screen_driver.v":66)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 8("/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/screen_driver.v":108)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/screen_driver.v":128)
+WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/screen_driver.v":141)
+WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/screen_driver.v":148)
+WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/screen_driver.v":183)
+WARN  (EX1998) : Net 'commandIndex[2]' does not have a driver("/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/screen_driver.v":52)
 Compiling module 'jump_controller'("/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/jump_controller.v":1)
 Compiling module 'pattern_generator'("/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/pattern_generator.v":1)
 Extracting RAM for identifier 'catSprite'("/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/pattern_generator.v":18)

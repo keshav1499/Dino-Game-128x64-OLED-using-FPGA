@@ -1,6 +1,7 @@
 module jump_controller (
   input wire clk,       // Clock signal (typically 27 MHz)
   input wire btn1,      // Active-low button input (pressed when 0)
+  input wire gameon,
   output reg jumpOffset // Output signal to indicate "jump" state
 );
 
@@ -26,7 +27,7 @@ module jump_controller (
   // Main control logic triggered on every rising edge of the clock
   always @(posedge clk) begin
     // Start of a new jump when not already jumping and button is pressed
-    if (!jumping && btn1pressed) begin
+    if (!jumping && btn1pressed && gameon) begin
       jumping <= 1;           // Set jumping state to true
       jumpCounter <= 0;       // Reset the jump duration counter
       jumpOffset <= 1;        // Activate jump output (Dino goes up)

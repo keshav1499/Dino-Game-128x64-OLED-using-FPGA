@@ -17,7 +17,7 @@
    },
    {
     "InstFile" : "/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/top.v",
-    "InstLine" : 41,
+    "InstLine" : 42,
     "InstName" : "jump_inst",
     "ModuleFile" : "/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/jump_controller.v",
     "ModuleLine" : 1,
@@ -25,7 +25,7 @@
    },
    {
     "InstFile" : "/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/top.v",
-    "InstLine" : 49,
+    "InstLine" : 51,
     "InstName" : "patternGen",
     "ModuleFile" : "/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/pattern_generator.v",
     "ModuleLine" : 1,
@@ -33,7 +33,7 @@
    },
    {
     "InstFile" : "/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/top.v",
-    "InstLine" : 60,
+    "InstLine" : 62,
     "InstName" : "score_counter_only",
     "ModuleFile" : "/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/score_logic.v",
     "ModuleLine" : 1,
