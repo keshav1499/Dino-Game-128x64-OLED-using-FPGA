@@ -13,7 +13,7 @@ WARN  (EX3791) : Expression size 32 truncated to fit in target size 8("/home/tal
 WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/screen_driver.v":123)
 WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/screen_driver.v":136)
 WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/screen_driver.v":143)
-WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/screen_driver.v":182)
+WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/screen_driver.v":183)
 WARN  (EX1998) : Net 'commandIndex[2]' does not have a driver("/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/screen_driver.v":52)
 Compiling module 'jump_controller'("/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/jump_controller.v":1)
 Compiling module 'pattern_generator'("/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/pattern_generator.v":1)
@@ -54,8 +54,3 @@ Running technical mapping ...
 [60%] Tech-Mapping Phase 0 completed
 [65%] Tech-Mapping Phase 1 completed
 [75%] Tech-Mapping Phase 2 completed
-[80%] Tech-Mapping Phase 3 completed
-[90%] Tech-Mapping Phase 4 completed
-[95%] Generate netlist file "/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/impl/gwsynthesis/Functional_60FPS.vg" completed
-[100%] Generate report file "/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/impl/gwsynthesis/Functional_60FPS_syn.rpt.html" completed
-GowinSynthesis finish

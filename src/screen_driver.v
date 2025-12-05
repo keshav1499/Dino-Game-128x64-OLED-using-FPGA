@@ -175,11 +175,12 @@ STATE_WAIT_FRAME: begin
 
   if (frameWaitCounter >= FRAME_WAIT) begin
     frameWaitCounter <= 0;
+    //Modifications on original screen-driver
     if (gameOn_edge) begin
         frameNumber <= 8'b0; // Reset frame number
         prevGameOn <= gameon;
     end else begin
-        frameNumber <= frameNumber + 1; // Normal increment
+        frameNumber <= frameNumber + 1; // Normal increment, in original driver, only this line will exist here, delete the entire if-else logic from 4 lines before
         prevGameOn <= gameon;
     end
     pixelCounter <= 0;
