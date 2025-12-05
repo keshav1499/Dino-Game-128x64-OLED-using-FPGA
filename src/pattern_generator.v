@@ -27,14 +27,14 @@ module pattern_generator (
   initial $readmemh("hex_pngs/nums.hex", numerics);
 
   // --- Game Constants ---
-  localparam CAT_X           = 40;
+  localparam CAT_X           = 36;
   localparam CAT_WIDTH       = 16;
   localparam OBS_WIDTH       = 8;
   localparam SCREEN_WIDTH    = 128;
   localparam SCORE_ROW       = 0;
   localparam CHAR_WIDTH      = 8;
   localparam SCORE_LABEL_WIDTH = 34; 
-  localparam SCORE_COL       = 49; 
+  localparam SCORE_COL       = 58; 
   localparam SCORE_DIGIT_GAP = 2;
 
   // --- Score Positioning ---
@@ -51,7 +51,8 @@ module pattern_generator (
   wire [3:0] score_ones     = score % 10;
 
   // --- Obstacle Position & Collision Logic ---
-  wire [6:0] obsX     = SCREEN_WIDTH - ((frameNumber * 1) % (SCREEN_WIDTH + OBS_WIDTH));
+  wire [7:0] speedFactor = 1 + (score / 100);
+  wire [6:0] obsX     = SCREEN_WIDTH - ((frameNumber * speedFactor) % (SCREEN_WIDTH + OBS_WIDTH)); // -score/100 ensures faster obstacles as score gets higher
   wire [6:0] obsXEnd  = obsX + OBS_WIDTH;
   wire horizontalOverlap = (obsX < (CAT_X + CAT_WIDTH)) && (obsXEnd > CAT_X);
   wire catOnGround       = !jumpOffset;
@@ -81,7 +82,7 @@ module pattern_generator (
   always @(posedge score_tick) begin
     if (gameon) begin
       // Increment score only during STATE_PLAY
-      score <= score + 1 + score/100;
+      score <= score + speedFactor;
     end else if (currentState == STATE_START_GAME) begin
             score <= 0;
         end

@@ -64,7 +64,7 @@ module screen_driver
 
   //detect gameon STATE activation
   reg prevGameOn = 1'b0;
-  wire gameOn_edge = (prevGameOn == 1'b0) && (gameon == 1'b1);
+  wire gameOn_edge = (prevGameOn == 0) && (gameon == 1); // I want to detect if gameon is going from 0 to 1
 
   // Generate 1 byte of display pattern dynamically
 
@@ -133,7 +133,7 @@ end
   cs <= 1;
   if (dc == 0) begin // Command phase
     if (commandIndex == 0) begin
-      frameNumber <= gameOn_edge ? 8'b0: frameNumber + 1 ;
+      frameNumber <= frameNumber + 1; 
       pixelCounter <= 0;
       state <= STATE_LOAD_DATA;
     end else begin
@@ -175,14 +175,17 @@ STATE_WAIT_FRAME: begin
 
   if (frameWaitCounter >= FRAME_WAIT) begin
     frameWaitCounter <= 0;
-    frameNumber <= frameNumber + 1;
+    if (gameOn_edge) begin
+        frameNumber <= 8'b0; // Reset frame number
+        prevGameOn <= gameon;
+    end else begin
+        frameNumber <= frameNumber + 1; // Normal increment
+        prevGameOn <= gameon;
+    end
     pixelCounter <= 0;
     state <= STATE_LOAD_DATA;
   end
 end
-
-
-
 
 
 
