@@ -51,7 +51,7 @@ module pattern_generator (
   wire [3:0] score_ones     = score % 10;
 
   // --- Obstacle Position & Collision Logic ---
-  wire [7:0] speedFactor = 1 + (score / 200);
+  wire [7:0] speedFactor = 1 + (score / 250);
   wire [6:0] obsX     = SCREEN_WIDTH - ((frameNumber * speedFactor) % (SCREEN_WIDTH + OBS_WIDTH)); // speedFactor scaling logic
   wire [6:0] obsXEnd  = obsX + OBS_WIDTH;
   wire horizontalOverlap = (obsX < (CAT_X + CAT_WIDTH)) && (obsXEnd > CAT_X);
