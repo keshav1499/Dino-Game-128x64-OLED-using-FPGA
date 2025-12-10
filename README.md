@@ -81,6 +81,7 @@ Tested on:
 | `cat_sprite.hex` | Cat sprite data |
 
 ---
+```
 
 ## 🧠 FSM Overview (Core of the Game)
 ┌────────────┐ button press ┌──────────────┐
@@ -94,7 +95,7 @@ button press ▼
 button press
 ▼
 START
-
+```
 
 
 The jump is handled as a **sub-state** (`PLAY_JUMP`), giving you true scalability:
