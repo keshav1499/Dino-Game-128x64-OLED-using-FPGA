@@ -84,17 +84,18 @@ Tested on:
 ```
 
 ## 🧠 FSM Overview (Core of the Game)
-┌────────────┐ button press ┌──────────────┐
-│ START │ ───────────────────▶ │ PLAY_RUNNING │
-└────────────┘ └──────┬──────┘
-│ collision
-button press ▼
-┌────────────────┐
-│ GAME_OVER │
-└──────┬─────────┘
-button press
-▼
-START
+ ┌────────────┐     button press       ┌──────────────┐
+ │   START     │ ───────────────────▶ │ PLAY_RUNNING │
+ └────────────┘                        └──────┬───────┘
+                                              │ collision
+                              button press    ▼
+                                     ┌────────────────┐
+                                     │   GAME_OVER    │
+                                     └──────┬─────────┘
+                                    button press
+                                           ▼
+                                       START
+
 ```
 
 
