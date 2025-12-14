@@ -9,7 +9,7 @@ module score_logic (
   // Input F_clk = 27,000,000 Hz
   // Desired F_out = 9 Hz
   // Counter Max (T) = 1,499,999
-  localparam COUNT_MAX = 21'd1499999; 
+  localparam COUNT_MAX = 21'd1000000//21'd1499999; 
 
   // Counter needs 21 bits
   reg [20:0] counter = 21'd0;
