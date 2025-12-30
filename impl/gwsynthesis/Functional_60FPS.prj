@@ -4,17 +4,17 @@
     <Version>beta</Version>
     <Device id="GW1NR-9C" package="QFN88P" speed="6" partNumber="GW1NR-LV9QN88PC6/I5"/>
     <FileList>
-        <File path="/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/jump_controller.v" type="verilog"/>
-        <File path="/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/pattern_generator.v" type="verilog"/>
-        <File path="/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/score_logic.v" type="verilog"/>
-        <File path="/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/screen_driver.v" type="verilog"/>
-        <File path="/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/top.v" type="verilog"/>
+        <File path="/home/tallguydesi/Dino-Game-128x64-OLED-using-FPGA/src/jump_controller.v" type="verilog"/>
+        <File path="/home/tallguydesi/Dino-Game-128x64-OLED-using-FPGA/src/pattern_generator.v" type="verilog"/>
+        <File path="/home/tallguydesi/Dino-Game-128x64-OLED-using-FPGA/src/score_logic.v" type="verilog"/>
+        <File path="/home/tallguydesi/Dino-Game-128x64-OLED-using-FPGA/src/screen_driver.v" type="verilog"/>
+        <File path="/home/tallguydesi/Dino-Game-128x64-OLED-using-FPGA/src/top.v" type="verilog"/>
     </FileList>
     <OptionList>
         <Option type="disable_insert_pad" value="0"/>
         <Option type="global_freq" value="50.000"/>
         <Option type="looplimit" value="2000"/>
-        <Option type="output_file" value="/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/impl/gwsynthesis/Functional_60FPS.vg"/>
+        <Option type="output_file" value="/home/tallguydesi/Dino-Game-128x64-OLED-using-FPGA/impl/gwsynthesis/Functional_60FPS.vg"/>
         <Option type="print_all_synthesis_warning" value="0"/>
         <Option type="ram_rw_check" value="0"/>
         <Option type="vcc" value="1.2"/>

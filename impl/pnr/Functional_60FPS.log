@@ -1,7 +1,7 @@
-Reading netlist file: "/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/impl/gwsynthesis/Functional_60FPS.vg"
-Parsing netlist file "/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/impl/gwsynthesis/Functional_60FPS.vg" completed
+Reading netlist file: "/home/tallguydesi/Dino-Game-128x64-OLED-using-FPGA/impl/gwsynthesis/Functional_60FPS.vg"
+Parsing netlist file "/home/tallguydesi/Dino-Game-128x64-OLED-using-FPGA/impl/gwsynthesis/Functional_60FPS.vg" completed
 Processing netlist completed
-Reading constraint file: "/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/Functional_60FPS.cst"
+Reading constraint file: "/home/tallguydesi/Dino-Game-128x64-OLED-using-FPGA/src/Functional_60FPS.cst"
 Physical Constraint parsed completed
 Running placement......
 [10%] Placement Phase 0 completed
@@ -23,10 +23,10 @@ Bitstream generation in progress......
 Bitstream generation completed
 Running power analysis......
 [100%] Power analysis completed
-Generate file "/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/impl/pnr/Functional_60FPS.power.html" completed
-Generate file "/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/impl/pnr/Functional_60FPS.pin.html" completed
-Generate file "/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/impl/pnr/Functional_60FPS.rpt.html" completed
-Generate file "/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/impl/pnr/Functional_60FPS.rpt.txt" completed
-Generate file "/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/impl/pnr/Functional_60FPS.tr.html" completed
-Fri Dec  5 20:47:38 2025
+Generate file "/home/tallguydesi/Dino-Game-128x64-OLED-using-FPGA/impl/pnr/Functional_60FPS.power.html" completed
+Generate file "/home/tallguydesi/Dino-Game-128x64-OLED-using-FPGA/impl/pnr/Functional_60FPS.pin.html" completed
+Generate file "/home/tallguydesi/Dino-Game-128x64-OLED-using-FPGA/impl/pnr/Functional_60FPS.rpt.html" completed
+Generate file "/home/tallguydesi/Dino-Game-128x64-OLED-using-FPGA/impl/pnr/Functional_60FPS.rpt.txt" completed
+Generate file "/home/tallguydesi/Dino-Game-128x64-OLED-using-FPGA/impl/pnr/Functional_60FPS.tr.html" completed
+Tue Dec 30 15:01:05 2025
 

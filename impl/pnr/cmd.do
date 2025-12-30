@@ -1,9 +1,9 @@
--d /home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/impl/gwsynthesis/Functional_60FPS.vg
+-d /home/tallguydesi/Dino-Game-128x64-OLED-using-FPGA/impl/gwsynthesis/Functional_60FPS.vg
 -p GW1NR-9C-QFN88P-6
 -pn GW1NR-LV9QN88PC6/I5
--cst /home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/Functional_60FPS.cst
--cfg /home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/impl/pnr/device.cfg
--sdc /home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/Functional_60FPS.sdc
+-cst /home/tallguydesi/Dino-Game-128x64-OLED-using-FPGA/src/Functional_60FPS.cst
+-cfg /home/tallguydesi/Dino-Game-128x64-OLED-using-FPGA/impl/pnr/device.cfg
+-sdc /home/tallguydesi/Dino-Game-128x64-OLED-using-FPGA/src/Functional_60FPS.sdc
 -bit
 -tr
 -ph

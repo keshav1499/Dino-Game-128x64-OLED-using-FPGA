@@ -2,23 +2,23 @@
  "Device" : "GW1NR-9C",
  "Files" : [
   {
-   "Path" : "/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/jump_controller.v",
+   "Path" : "/home/tallguydesi/Dino-Game-128x64-OLED-using-FPGA/src/jump_controller.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/pattern_generator.v",
+   "Path" : "/home/tallguydesi/Dino-Game-128x64-OLED-using-FPGA/src/pattern_generator.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/score_logic.v",
+   "Path" : "/home/tallguydesi/Dino-Game-128x64-OLED-using-FPGA/src/score_logic.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/screen_driver.v",
+   "Path" : "/home/tallguydesi/Dino-Game-128x64-OLED-using-FPGA/src/screen_driver.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/src/top.v",
+   "Path" : "/home/tallguydesi/Dino-Game-128x64-OLED-using-FPGA/src/top.v",
    "Type" : "verilog"
   }
  ],
@@ -26,7 +26,7 @@
 
  ],
  "LoopLimit" : 2000,
- "ResultFile" : "/home/tallguydesi/Documents/Dino-Game-128x64-OLED-using-FPGA/impl/temp/rtl_parser.result",
+ "ResultFile" : "/home/tallguydesi/Dino-Game-128x64-OLED-using-FPGA/impl/temp/rtl_parser.result",
  "Top" : "",
  "VerilogStd" : "verilog_2001",
  "VhdlStd" : "vhdl_93"
