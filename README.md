@@ -88,7 +88,7 @@ Tested on:
  │   START     │ ───────────────────▶ │ PLAY_RUNNING │
  └────────────┘                        └──────┬───────┘
                                               │ collision
-                              button press    ▼
+                                              ▼
                                      ┌────────────────┐
                                      │   GAME_OVER    │
                                      └──────┬─────────┘
